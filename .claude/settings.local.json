@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "Bash(npm create:*)",
+      "Bash(cd city-quiz:*)",
+      "Bash(cd D:\\\\桌面\\\\test:*)"
+    ]
+  }
+}
