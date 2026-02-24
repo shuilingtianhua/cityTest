@@ -1039,26 +1039,45 @@ export const cities = {
  */
 export function calculateRecommendedCities(answers, wuxing) {
   const results = []
+  
+  // 统计选择题选项分布
+  const optionCount = {
+    A: 0,
+    B: 0,
+    C: 0,
+    D: 0
+  }
+  
+  answers.forEach(answer => {
+    // 假设answer对象包含option属性表示A/B/C/D
+    if (answer.option) {
+      optionCount[answer.option]++
+    }
+  })
 
   for (const [cityName, cityData] of Object.entries(cities)) {
     let score = 0
     const matchedTags = []
+    const reasons = []
 
-    // 计算标签匹配分数
-    for (const answer of answers) {
-      if (cityData.tags.includes(answer.value)) {
-        score += 1
-        matchedTags.push(answer.value)
-      }
+    // 1. 八字喜用神匹配（先天能量需求）
+    if (wuxing && wuxing.dominant) {
+      // 城市五行强度评估
+      const cityElementScore = evaluateCityElementScore(cityName, wuxing.dominant)
+      score += cityElementScore.score
+      reasons.push(...cityElementScore.reasons)
     }
 
-    // 五行匹配分数（如果主导五行与城市五行有交集，加分）
-    if (wuxing && wuxing.dominant) {
-      for (const wuxingElement of wuxing.dominant) {
-        if (cityData.wuxing.includes(wuxingElement)) {
-          score += 2 // 五行匹配权重更高
-          matchedTags.push(`五行:${wuxingElement}`)
-        }
+    // 2. 选择题匹配（后天现实匹配度）
+    const optionScore = evaluateOptionScore(optionCount, cityName)
+    score += optionScore.score
+    reasons.push(...optionScore.reasons)
+
+    // 3. 标签直接匹配
+    for (const answer of answers) {
+      if (cityData.tags.includes(answer.value)) {
+        score += 0.5
+        matchedTags.push(answer.value)
       }
     }
 
@@ -1066,6 +1085,7 @@ export function calculateRecommendedCities(answers, wuxing) {
       name: cityName,
       score: score,
       matchedTags: matchedTags,
+      reasons: reasons,
       data: cityData
     })
   }
@@ -1074,4 +1094,112 @@ export function calculateRecommendedCities(answers, wuxing) {
   results.sort((a, b) => b.score - a.score)
 
   return results
+}
+
+/**
+ * 评估城市与八字喜用神的匹配度
+ */
+function evaluateCityElementScore(cityName, dominantElements) {
+  let score = 0
+  const reasons = []
+  
+  // 五行城市映射
+  const elementCities = {
+    '火': {
+      cities: ['深圳', '广州', '厦门', '长沙', '海口', '三亚', '杭州'],
+      description: '南方城市、夏季炎热、夜景繁华、互联网/电子/文化传媒产业发达'
+    },
+    '水': {
+      cities: ['上海', '青岛', '大连', '宁波', '福州', '温州', '武汉', '南京', '重庆'],
+      description: '沿海/沿江城市、名字带水、多雨、金融/贸易/物流发达'
+    },
+    '木': {
+      cities: ['杭州', '苏州', '昆明', '贵阳', '南宁', '桂林'],
+      description: '东部城市、绿化率高、园林多、教育/文创产业发达'
+    },
+    '金': {
+      cities: ['西安', '成都', '重庆', '太原', '呼和浩特', '沈阳', '乌鲁木齐'],
+      description: '西部城市、矿产资源、金融中心、交通枢纽'
+    },
+    '土': {
+      cities: ['北京', '郑州', '西安', '成都', '重庆'],
+      description: '中原城市、内陆盆地、政治文化中心、厚重稳定'
+    }
+  }
+  
+  dominantElements.forEach((element, index) => {
+    if (elementCities[element]) {
+      if (elementCities[element].cities.includes(cityName)) {
+        // 优先级评分，第一个元素权重最高
+        const elementScore = (dominantElements.length - index) * 2
+        score += elementScore
+        reasons.push(`八字喜${element}，${cityName}属于${element}旺城市（${elementCities[element].description}）`)
+      }
+    }
+  })
+  
+  return { score, reasons }
+}
+
+/**
+ * 评估选择题选项与城市的匹配度
+ */
+function evaluateOptionScore(optionCount, cityName) {
+  let score = 0
+  const reasons = []
+  
+  // 选项偏好与城市类型映射
+  const optionCityMap = {
+    A: {
+      cities: ['杭州', '成都', '青岛', '厦门', '昆明', '大连', '珠海'],
+      description: '自然、安静、慢节奏、注重生活质量、怕拥挤'
+    },
+    B: {
+      cities: ['广州', '长沙', '重庆', '苏州', '南京', '武汉', '西安'],
+      description: '务实、平衡、可快可慢、适应性强'
+    },
+    C: {
+      cities: ['昆明', '大连', '珠海', '厦门', '青岛', '苏州', '杭州'],
+      description: '追求品质、有明确偏好、愿意为喜欢的事物付出'
+    },
+    D: {
+      cities: ['上海', '北京', '深圳', '广州', '成都', '杭州'],
+      description: '自由奔放、不拘一格、适应性强'
+    }
+  }
+  
+  // 找出用户最偏好的选项
+  let maxOption = 'A'
+  let maxCount = optionCount.A
+  
+  if (optionCount.B > maxCount) {
+    maxOption = 'B'
+    maxCount = optionCount.B
+  }
+  if (optionCount.C > maxCount) {
+    maxOption = 'C'
+    maxCount = optionCount.C
+  }
+  if (optionCount.D > maxCount) {
+    maxOption = 'D'
+    maxCount = optionCount.D
+  }
+  
+  // 评估城市与用户偏好的匹配度
+  if (optionCityMap[maxOption].cities.includes(cityName)) {
+    score += 5
+    reasons.push(`您的选择题偏好${maxOption}（${optionCityMap[maxOption].description}），${cityName}符合这一偏好`)
+  }
+  
+  // 次要偏好也考虑
+  Object.keys(optionCount).forEach(option => {
+    if (option !== maxOption && optionCount[option] > 3) {
+      if (optionCityMap[option].cities.includes(cityName)) {
+        score += 2
+        reasons.push(`您也有${option}选项偏好，${cityName}部分符合`)
+      }
+    }
+  })
+  
+  return { score, reasons }
 }

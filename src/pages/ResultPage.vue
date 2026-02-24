@@ -66,12 +66,22 @@
               <div class="section-title">🎯 匹配因素</div>
               <div class="matched-factors">
                 <span
-                  v-for="tag in topCity.matchedTags"
+                  v-for="tag in [...new Set(topCity.matchedTags)]"
                   :key="tag"
                   class="factor-tag"
                 >
-                  {{ tag }}
+                  {{ getTagWithChinese(tag) }}
                 </span>
+              </div>
+            </div>
+
+            <!-- 推荐理由 -->
+            <div v-if="topCity.reasons && topCity.reasons.length > 0" class="city-section">
+              <div class="section-title">✨ 推荐理由</div>
+              <div class="reasons-list">
+                <div v-for="(reason, index) in topCity.reasons" :key="index" class="reason-item">
+                  {{ reason }}
+                </div>
               </div>
             </div>
           </div>
@@ -174,7 +184,94 @@ function getElementIcon(element) {
   return elementIcons[element] || '✨'
 }
 
+const tagMap = {
+  // 城市类型
+  metropolis: 'metropolis (超大城市)',
+  hub: 'hub (交通枢纽)',
+  coastal: 'coastal (滨海城市)',
+  pastoral: 'pastoral (田园城市)',
+  
+  // 生活方式
+  four_seasons: 'four_seasons (四季分明)',
+  warm_humid: 'warm_humid (温暖湿润)',
+  cool_rainy: 'cool_rainy (凉爽多雨)',
+  dry_sunny: 'dry_sunny (干燥晴朗)',
+  
+  fast_pace: 'fast_pace (快节奏)',
+  medium_pace: 'medium_pace (中等节奏)',
+  slow_pace: 'slow_pace (慢节奏)',
+  flexible: 'flexible (灵活节奏)',
+  
+  // 城市属性
+  culture: 'culture (文化底蕴)',
+  economy: 'economy (经济发达)',
+  nature: 'nature (自然环境)',
+  innovation: 'innovation (创新科技)',
+  
+  // 休闲娱乐
+  art_museum: 'art_museum (艺术文化)',
+  outdoor: 'outdoor (户外活动)',
+  shopping_food: 'shopping_food (购物美食)',
+  quiet_reading: 'quiet_reading (安静阅读)',
+  
+  bustling: 'bustling (热闹繁华)',
+  friendly: 'friendly (温馨友好)',
+  private: 'private (安静私密)',
+  international: 'international (国际氛围)',
+  
+  // 经济成本
+  high_cost: 'high_cost (高成本)',
+  medium_cost: 'medium_cost (中等成本)',
+  low_cost: 'low_cost (低成本)',
+  flexible_cost: 'flexible_cost (灵活成本)',
+  
+  // 社交环境
+  traditional_food: 'traditional_food (传统美食)',
+  international_food: 'international_food (国际美食)',
+  healthy_food: 'healthy_food (健康饮食)',
+  casual_food: 'casual_food (随意饮食)',
+  
+  // 教育资源
+  top_education: 'top_education (顶尖教育)',
+  basic_education: 'basic_education (基础教育)',
+  international_education: 'international_education (国际教育)',
+  moderate_education: 'moderate_education (普通教育)',
+  
+  // 交通
+  public_transport: 'public_transport (公共交通)',
+  car_friendly: 'car_friendly (自驾友好)',
+  bike_friendly: 'bike_friendly (骑行友好)',
+  walkable: 'walkable (步行友好)',
+  
+  port: 'port (港口城市)',
+  gateway: 'gateway (门户城市)',
+  inland: 'inland (内陆城市)',
+  
+  // 产业
+  manufacture: 'manufacture (制造业)',
+  tourism: 'tourism (旅游业)',
+  entrepreneur: 'entrepreneur (创业氛围)',
+  emerging: 'emerging (新兴城市)',
+  
+  // 环境
+  historic: 'historic (历史文化)',
+  
+  // 其他
+  '五行木': '五行木',
+  '五行火': '五行火',
+  '五行土': '五行土',
+  '五行金': '五行金',
+  '五行水': '五行水',
+  '五行强:木': '五行强:木',
+  '五行强:火': '五行强:火',
+  '五行强:土': '五行强:土',
+  '五行强:金': '五行强:金',
+  '五行强:水': '五行强:水'
+}
 
+function getTagWithChinese(tag) {
+  return tagMap[tag] || tag
+}
 
 function resetTest() {
   if (confirm('确定要重新开始测试吗？这将清除当前的答题记录。')) {
@@ -425,6 +522,21 @@ onMounted(() => {
   padding: 4px 10px;
   border-radius: 15px;
   font-size: 12px;
+}
+
+.reasons-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.reason-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 13px;
+  line-height: 1.5;
+  opacity: 0.95;
 }
 
 .other-cities {

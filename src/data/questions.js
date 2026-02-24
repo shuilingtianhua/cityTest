@@ -3,333 +3,315 @@
  */
 
 export const questions = [
-  // 气候与节奏
+  // 第一组：生活节奏与幸福感
   {
     id: 1,
-    question: "你更喜欢哪种气候？",
+    question: "理想的早晨，你更希望是哪种画面？",
     options: [
-      { label: "四季分明，春秋宜人", value: "four_seasons" },
-      { label: "温暖湿润，冬天不太冷", value: "warm_humid" },
-      { label: "凉爽舒适，宁愿稍冷一点", value: "cool_rainy" },
-      { label: "干燥通透，阳光充足", value: "dry_sunny" }
+      { label: "自然唤醒型：被阳光和鸟鸣叫醒，在阳台喝杯咖啡发会呆", value: "natural_morning" },
+      { label: "便利启动型：下楼就是早餐铺/便利店，打包带走路上搞定", value: "convenient_morning" },
+      { label: "效率优先型：家离公司近，多睡半小时，踩点打卡", value: "efficient_morning" },
+      { label: "夜猫子型：上午不存在，从中午才开始真正醒来", value: "night_owl_morning" }
     ]
   },
   {
     id: 2,
-    question: "你理想的生活节奏是？",
+    question: "工作日的晚饭后，你更倾向？",
     options: [
-      { label: "快节奏，充满活力和机遇", value: "fast_pace" },
-      { label: "中等节奏，平衡工作生活", value: "medium_pace" },
-      { label: "慢节奏，享受悠闲时光", value: "slow_pace" },
-      { label: "平时慢一点，关键时刻能冲刺", value: "flexible" }
+      { label: "宅家充电：追剧、看书、打游戏，享受独处时光", value: "home_evening" },
+      { label: "附近溜达：去公园散步、逛超市或楼下小酒馆坐坐", value: "neighborhood_evening" },
+      { label: "社交时刻：约饭、看演出、参加活动，不回家那么早", value: "social_evening" },
+      { label: "继续搬砖：加班或学习，为未来蓄力", value: "work_evening" }
     ]
   },
-
-  // 城市类型与发展方向
   {
     id: 3,
-    question: "你对城市的期待中，哪个最重要？",
+    question: "对于\"排队\"，你的真实心态是？",
     options: [
-      { label: "丰富的文化底蕴和历史", value: "culture" },
-      { label: "发达的经济和高薪机会", value: "economy" },
-      { label: "优美的自然环境和生态", value: "nature" },
-      { label: "创新前沿和科技氛围", value: "innovation" }
+      { label: "极度排斥：超过5分钟就烦躁，宁愿不吃", value: "hate_queue" },
+      { label: "看情况：网红店超过20分钟就放弃，但真爱的店愿意等", value: "selective_queue" },
+      { label: "愿意尝试：只要评价好，排1小时也OK，就当体验", value: "willing_queue" },
+      { label: "绝不排队：直接找黄牛或选VIP通道", value: "avoid_queue" }
     ]
   },
   {
     id: 4,
-    question: "你更偏好哪一类城市？",
+    question: "周末最理想的打开方式是？",
     options: [
-      { label: "国际化大都市，节奏很快", value: "metropolis" },
-      { label: "省会或区域中心城市", value: "hub" },
-      { label: "滨海旅居型城市", value: "coastal" },
-      { label: "山水小城或田园城市", value: "pastoral" }
+      { label: "自然疗愈：爬山、露营、逛公园，去人少的地方吸氧", value: "nature_weekend" },
+      { label: "城市探索：看展、探店、逛商场、打卡新地标", value: "city_explore_weekend" },
+      { label: "躺平休息：在家点外卖，瘫两天谁也别叫我", value: "rest_weekend" },
+      { label: "社交聚会：约朋友吃饭、桌游、剧本杀", value: "social_weekend" }
     ]
   },
-
-  // 休闲方式与日常生活
   {
     id: 5,
-    question: "周末你喜欢做什么？",
+    question: "你能接受的单程通勤极限是？",
     options: [
-      { label: "逛博物馆、艺术展、文化活动", value: "art_museum" },
-      { label: "户外徒步、露营、登山", value: "outdoor" },
-      { label: "逛街购物、美食探店", value: "shopping_food" },
-      { label: "安静待在家或咖啡馆，自己充电", value: "quiet_reading" }
+      { label: "30分钟以内：通勤超过半小时会严重影响幸福感", value: "short_commute" },
+      { label: "45分钟左右：可以接受，但再长就需要权衡", value: "medium_commute" },
+      { label: "1小时左右：为了住得舒服或工作机会，可以忍", value: "long_commute" },
+      { label: "1.5小时以上：只要能上车睡觉或听东西，也能接受", value: "very_long_commute" }
     ]
   },
+  
+  // 第二组：职业与财富
   {
     id: 6,
-    question: "你希望所在城市的夜晚是什么氛围？",
+    question: "你目前的职业形态更接近？",
     options: [
-      { label: "霓虹灯通明，很热闹", value: "bustling" },
-      { label: "有夜市和小吃街，但不过分吵闹", value: "friendly" },
-      { label: "偶尔有夜生活，多数时间比较安静", value: "private" },
-      { label: "有音乐节、Livehouse 等多元文化场景", value: "international" }
+      { label: "平台依附型：需要大公司背书、团队协作、总部资源", value: "corporate_career" },
+      { label: "技能独立型：靠专业技能吃饭，在哪都能干", value: "independent_career" },
+      { label: "资源关系型：需要人脉积累、圈子社交、信息差", value: "network_career" },
+      { label: "创业折腾型：想自己干点啥，不怕失败，就怕没机会", value: "entrepreneur_career" }
     ]
   },
-
-  // 经济压力与成本
   {
     id: 7,
-    question: "你对房价和物价的接受程度？",
+    question: "对于职业发展，你更看重？",
     options: [
-      { label: "可以接受较高成本，只要发展好", value: "high_cost" },
-      { label: "中等水平，性价比重要", value: "medium_cost" },
-      { label: "偏好较低成本，生活压力小", value: "low_cost" },
-      { label: "短期内不太在意成本，更看经验和阅历", value: "flexible_cost" }
+      { label: "稳定和安全：大平台、五险一金、不轻易裁员", value: "stable_career" },
+      { label: "成长和空间：能学到东西、快速升职、承担更多", value: "growth_career" },
+      { label: "平衡和自由：钱够用就行，不想太累，有生活", value: "balance_career" },
+      { label: "财务爆发：想搞大钱，愿意赌一把，不怕996", value: "wealth_career" }
     ]
   },
   {
     id: 8,
-    question: "如果收入差不多，你更在意哪一点？",
+    question: "你对\"搞钱\"的渴望程度是？",
     options: [
-      { label: "消费便宜，存钱更快", value: "low_cost" },
-      { label: "消费适中，但公共服务更好", value: "medium_cost" },
-      { label: "消费略高，但机会更多", value: "economy" },
-      { label: "消费高，但生活方式很精彩", value: "high_cost" }
+      { label: "极强：年轻就是搞钱，存钱第一位，生活可以凑合", value: "high_wealth_drive" },
+      { label: "中等：要赚钱，但也要生活，不能牺牲健康", value: "medium_wealth_drive" },
+      { label: "够用就行：钱是工具，不是目的，差不多就行", value: "low_wealth_drive" },
+      { label: "随缘：有就多花，没就少花，不想被钱绑架", value: "free_wealth_drive" }
     ]
   },
-
-  // 社交、美食、教育
   {
     id: 9,
-    question: "你喜欢什么样的社交环境？",
+    question: "面对买房/租房，你的态度是？",
     options: [
-      { label: "热闹繁华，人来人往", value: "bustling" },
-      { label: "温暖人情，邻里和睦", value: "friendly" },
-      { label: "多元开放，国际范儿", value: "international" },
-      { label: "安静私密，保持距离", value: "private" }
+      { label: "必须买房：有房才有家，愿意为此背贷", value: "must_buy_house" },
+      { label: "看情况：能买就买，买不起也不强求", value: "flexible_house" },
+      { label: "长期租房：不想被房贷绑死，喜欢自由", value: "rent_house" },
+      { label: "房车/旅居：不需要固定住所，在哪都能活", value: "nomadic_house" }
     ]
   },
   {
     id: 10,
-    question: "你对美食的态度是？",
+    question: "如果你有一笔闲钱（比如20万），你会？",
     options: [
-      { label: "热爱传统美食，讲究地道", value: "traditional_food" },
-      { label: "喜欢尝试各国料理", value: "international_food" },
-      { label: "偏好清淡健康饮食", value: "healthy_food" },
-      { label: "随缘就好，不会专门为吃跑远路", value: "casual_food" }
+      { label: "存银行/理财：求稳，保本最重要", value: "safe_investment" },
+      { label: "投资自己：报课、考证、进修", value: "self_investment" },
+      { label: "投资房产/理财：看机会，愿意尝试", value: "asset_investment" },
+      { label: "创业/投资朋友：自己干点啥，或者和朋友合伙", value: "risk_investment" }
     ]
   },
+  
+  // 第三组：人际与归属感
   {
     id: 11,
-    question: "你对教育资源的优先级？",
+    question: "你和亲友的关系现状是？",
     options: [
-      { label: "希望有顶尖高校和科研机构", value: "top_education" },
-      { label: "更在意中小学质量和学区", value: "basic_education" },
-      { label: "国际学校多，适合双语环境", value: "international_education" },
-      { label: "教育不是当前阶段的首要考虑", value: "moderate_education" }
+      { label: "深度绑定：父母年纪大，需要经常见面照顾", value: "close_family" },
+      { label: "定期联系：逢年过节回家，平时各忙各的", value: "regular_family" },
+      { label: "各自安好：家人都健康，支持我去任何地方", value: "independent_family" },
+      { label: "想要逃离：想离原生家庭远一点，重新开始", value: "distant_family" }
     ]
   },
-
-  // 交通与通勤
   {
     id: 12,
-    question: "你对城市交通的要求是？",
+    question: "在陌生环境里，你交新朋友的能力？",
     options: [
-      { label: "地铁密集，公共交通发达", value: "public_transport" },
-      { label: "道路通畅，自驾方便", value: "car_friendly" },
-      { label: "骑行友好，绿色出行", value: "bike_friendly" },
-      { label: "步行可达，社区内就能解决大部分需求", value: "walkable" }
+      { label: "社恐型：很难主动开口，需要很长时间", value: "shy_social" },
+      { label: "被动社交型：如果有人主动，可以聊得很好", value: "passive_social" },
+      { label: "主动出击型：参加活动、约人吃饭，很快能混熟", value: "active_social" },
+      { label: "随缘型：不强求，有朋友最好，没有也能自己待着", value: "casual_social" }
     ]
   },
   {
     id: 13,
-    question: "你更希望城市在全国交通网络中扮演什么角色？",
+    question: "你希望的邻里/社区关系是？",
     options: [
-      { label: "全国或区域级交通枢纽", value: "hub" },
-      { label: "重要港口或海运城市", value: "port" },
-      { label: "靠近多条高速和高铁，出行方便", value: "gateway" },
-      { label: "位置居中，去哪里都算折中", value: "inland" }
+      { label: "互不打扰：见面点头就行，别来烦我", value: "private_neighbor" },
+      { label: "适度友好：偶尔聊聊天，互相帮忙收快递", value: "friendly_neighbor" },
+      { label: "热热闹闹：像老家一样，邻里串门、互相照应", value: "close_neighbor" },
+      { label: "兴趣圈子：和邻居是因为共同爱好聚在一起", value: "hobby_neighbor" }
     ]
   },
-
-  // 工作机会与产业
   {
     id: 14,
-    question: "你更偏好哪一类工作机会？",
+    question: "对于\"孤独感\"，你的真实感受是？",
     options: [
-      { label: "互联网、科技和创新产业", value: "innovation" },
-      { label: "制造业、实体经济为主", value: "manufacture" },
-      { label: "文旅、消费和服务业", value: "tourism" },
-      { label: "综合型大城市，行业选择多", value: "economy" }
+      { label: "很难忍受：需要经常有人陪，否则会emo", value: "hate_loneliness" },
+      { label: "偶尔会：但可以通过视频/游戏缓解", value: "tolerate_loneliness" },
+      { label: "享受独处：一个人待着很舒服，不觉得孤独", value: "enjoy_loneliness" },
+      { label: "有宠物就够了：有猫有狗，万事足", value: "pet_loneliness" }
     ]
   },
   {
     id: 15,
-    question: "你对创业氛围的看重程度？",
+    question: "你希望未来的伴侣/家庭生活是怎样的？",
     options: [
-      { label: "非常重要，希望城市鼓励创业", value: "entrepreneur" },
-      { label: "有机会不错，但不是刚需", value: "emerging" },
-      { label: "更想在成熟企业稳定发展", value: "economy" },
-      { label: "目前不特别考虑创业相关", value: "moderate_education" }
+      { label: "单身万岁：暂时不考虑，或一直不考虑", value: "single_life" },
+      { label: "二人世界：和伴侣一起，暂时不要孩子", value: "couple_life" },
+      { label: "有娃家庭：未来要孩子，需要学区和生活配套", value: "family_life" },
+      { label: "丁克/晚育：不想要孩子，或很久以后再说", value: "childfree_life" }
     ]
   },
-
-  // 城市规模与氛围
+  
+  // 第四组：气候与环境
   {
     id: 16,
-    question: "你理想中的城市规模是？",
+    question: "你对冷热的耐受度是？",
     options: [
-      { label: "几乎所有东西都很大、很全的一线超大城市", value: "metropolis" },
-      { label: "人口多但不至于拥挤的省会级城市", value: "hub" },
-      { label: "中等城市或新一线，生活感更强", value: "bustling" },
-      { label: "小而美的城市，熟悉感更重要", value: "pastoral" }
+      { label: "极度怕冷：冬天低于0度会死，必须去南方", value: "heat_loving" },
+      { label: "极度怕热：夏天超过30度受不了，必须去北方/高原", value: "cold_loving" },
+      { label: "四季分明党：喜欢春夏秋冬分明，每个季节都有不同", value: "four_seasons_loving" },
+      { label: "无所谓：穿衣服调整就行，身体适应力强", value: "temperature_neutral" }
     ]
   },
   {
     id: 17,
-    question: "你对旅游属性强的城市有什么感觉？",
+    question: "你喜欢的天气偏好是？",
     options: [
-      { label: "很喜欢，愿意住在景点城市", value: "tourism" },
-      { label: "适合周末去玩，但日常生活更重要", value: "nature" },
-      { label: "不太想住在游客太多的地方", value: "private" },
-      { label: "如果资源好，游客多也可以接受", value: "coastal" }
+      { label: "阳光控：喜欢大晴天，阴天会抑郁", value: "sun_loving" },
+      { label: "雨雪控：喜欢下雨下雪，觉得很有安全感", value: "rain_snow_loving" },
+      { label: "温和派：不干不湿，不冷不热，刚刚好", value: "mild_weather_loving" },
+      { label: "没感觉：天气不影响心情，室内待着就行", value: "weather_neutral" }
     ]
   },
-
-  // 历史、人文与自然
   {
     id: 18,
-    question: "以下哪种城市印象最吸引你？",
+    question: "你对空气质量和环境敏感吗？",
     options: [
-      { label: "古城街巷、城墙和博物馆", value: "historic" },
-      { label: "高楼林立、夜景璀璨", value: "metropolis" },
-      { label: "山水田园、远离喧嚣", value: "pastoral" },
-      { label: "海湾、沙滩与海风", value: "coastal" }
+      { label: "非常敏感：雾霾会嗓子疼、鼻炎犯", value: "environment_sensitive" },
+      { label: "一般敏感：重度污染会不舒服，轻度能忍", value: "moderate_environment_sensitive" },
+      { label: "不敏感：没啥感觉，更看重经济活力", value: "environment_neutral" },
+      { label: "没概念：没住过污染城市，不知道", value: "environment_naive" }
     ]
   },
   {
     id: 19,
-    question: "你希望日常能多接触哪种自然环境？",
+    question: "你更喜欢哪种自然景观？",
     options: [
-      { label: "湖泊、河流、海边", value: "coastal" },
-      { label: "山林、公园和郊野绿道", value: "outdoor" },
-      { label: "城市园林和口袋公园", value: "nature" },
-      { label: "对自然环境没有特别刚需", value: "economy" }
+      { label: "山海控：喜欢海、沙滩、开阔水面", value: "ocean_loving" },
+      { label: "山川控：喜欢山、森林、徒步、登高", value: "mountain_loving" },
+      { label: "城市控：喜欢高楼大厦、灯火辉煌，自然无所谓", value: "city_loving" },
+      { label: "平原控：喜欢一望无际、视野开阔", value: "plain_loving" }
     ]
   },
-
-  // 出行半径与生活便利度
   {
     id: 20,
-    question: "你日常能接受的通勤方式是？",
+    question: "你对干燥/潮湿的适应力？",
     options: [
-      { label: "乘坐地铁/公交 40 分钟以内", value: "public_transport" },
-      { label: "自驾 30 分钟左右", value: "car_friendly" },
-      { label: "骑行或步行可达最好", value: "bike_friendly" },
-      { label: "通勤时间长一些也行，只要房子舒适", value: "flexible" }
+      { label: "怕潮湿：受不了回南天、梅雨季，会发霉", value: "dry_loving" },
+      { label: "怕干燥：皮肤会干裂、流鼻血", value: "humid_loving" },
+      { label: "都能适应：在哪都能调节", value: "humidity_neutral" },
+      { label: "没感觉：没注意过这个问题", value: "humidity_naive" }
     ]
   },
+  
+  // 第五组：胃口与生活方式
   {
     id: 21,
-    question: "理想中，你家附近 1 公里内最好有什么？",
+    question: "你的饮食习惯是？",
     options: [
-      { label: "购物中心和商街", value: "shopping_food" },
-      { label: "公园、绿地或河边步道", value: "outdoor" },
-      { label: "咖啡馆、书店和小剧场", value: "art_museum" },
-      { label: "菜市场、便利店等日常配套", value: "walkable" }
+      { label: "故乡胃：吃不到正宗的家乡菜会死", value: "hometown_food" },
+      { label: "重口味党：无辣不欢，喜欢火锅烧烤", value: "spicy_food" },
+      { label: "清淡党：喜欢原汁原味，海鲜/粤菜/日料", value: "light_food" },
+      { label: "国际胃：各国料理都爱，喜欢尝试新东西", value: "international_food" }
     ]
   },
-
-  // 家庭与未来规划
   {
     id: 22,
-    question: "如果未来考虑家庭，你更看重？",
+    question: "你对\"吃\"这件事的重视程度？",
     options: [
-      { label: "子女教育资源和升学机会", value: "top_education" },
-      { label: "生活成本和抚养压力", value: "low_cost" },
-      { label: "环境安全、社区氛围", value: "friendly" },
-      { label: "与父母或亲友距离方便往来", value: "hub" }
+      { label: "美食至上：可以为了好吃的搬家，愿意花时间探店", value: "food_obsessed" },
+      { label: "比较讲究：会找好吃的，但不会太折腾", value: "food_careful" },
+      { label: "一般般：能吃就行，不挑", value: "food_neutral" },
+      { label: "无所谓：经常吃外卖速食，不关心美食", value: "food_indifferent" }
     ]
   },
   {
     id: 23,
-    question: "你对养老/长期定居的城市有何偏好？",
+    question: "你对夜生活的需求是？",
     options: [
-      { label: "气候温暖湿润，冬天不冷", value: "warm_humid" },
-      { label: "夏天凉爽，适合避暑", value: "cool_rainy" },
-      { label: "环境安静、有山有水", value: "pastoral" },
-      { label: "医疗资源密集的大城市", value: "metropolis" }
+      { label: "必须丰富：晚上10点后街上得有人，有宵夜摊、酒吧", value: "nightlife_lover" },
+      { label: "偶尔有就行：周末能找个地方喝酒聊天，平时无所谓", value: "casual_nightlife" },
+      { label: "不需要：晚上10点后世界最好安静", value: "nightlife_hater" },
+      { label: "宅家夜生活：晚上是自己打游戏/追剧的时间，不需要出门", value: "home_nightlife" }
     ]
   },
-
-  // 个性与城市气场
   {
     id: 24,
-    question: "你更希望城市给你什么样的整体感觉？",
+    question: "你喜欢的购物方式是？",
     options: [
-      { label: "务实稳定，适合长期扎根", value: "economy" },
-      { label: "年轻有活力，机会不断出现", value: "innovation" },
-      { label: "慢生活、幸福感高", value: "slow_pace" },
-      { label: "多元包容，可以做自己", value: "international" }
+      { label: "下楼即达：便利店、小超市、菜市场，随时能买到", value: "convenient_shopping" },
+      { label: "周末采购：习惯开车去山姆/盒马，一次买一周", value: "bulk_shopping" },
+      { label: "网购为主：很少线下购物，快递方便就行", value: "online_shopping" },
+      { label: "逛街体验：喜欢逛商场、小店，享受线下淘货", value: "experiential_shopping" }
     ]
   },
   {
     id: 25,
-    question: "下面哪一句更接近你对城市的期望？",
+    question: "你对交通出行的偏好是？",
     options: [
-      { label: "哪怕忙一点，也要舞台够大", value: "fast_pace" },
-      { label: "挣钱和生活都要兼顾", value: "medium_pace" },
-      { label: "不想太卷，享受生活更重要", value: "slow_pace" },
-      { label: "阶段性可以拼一拼，以后再换城市", value: "emerging" }
+      { label: "地铁/公交党：不开车，靠公共交通出行", value: "public_transport" },
+      { label: "自驾党：出门必开车，受不了挤地铁", value: "car_driving" },
+      { label: "骑行/步行党：喜欢骑电动车或走路，近距离搞定", value: "biking_walking" },
+      { label: "混合党：怎么方便怎么来，看情况", value: "flexible_transport" }
     ]
   },
-
-  // 文化活动与娱乐
+  
+  // 第六组：个人状态与未来
   {
     id: 26,
-    question: "你更看重哪类文化娱乐资源？",
+    question: "你目前的人生阶段是？",
     options: [
-      { label: "剧院、博物馆、艺术展等高密度文化设施", value: "art_museum" },
-      { label: "音乐节、演唱会和综艺演播", value: "bustling" },
-      { label: "地方戏曲、民俗节庆", value: "historic" },
-      { label: "自然风光配合轻户外活动", value: "outdoor" }
+      { label: "刚毕业/职场新人：想闯一闯，积累经验", value: "fresh_graduate" },
+      { label: "职场中坚：有一定经验，想突破或转型", value: "mid_career" },
+      { label: "成家立业期：考虑结婚、买房、孩子", value: "family_building" },
+      { label: "中年/成熟期：想稳定下来，追求生活品质", value: "mature_stage" }
     ]
   },
   {
     id: 27,
-    question: "你对“游客很多”的城市是什么态度？",
+    question: "你对未来的确定性需求是？",
     options: [
-      { label: "很喜欢，越热闹越有活力", value: "tourism" },
-      { label: "还可以，选相对安静的片区居住", value: "coastal" },
-      { label: "不太喜欢，人太多会很累", value: "private" },
-      { label: "只要配套好、管理到位就能接受", value: "economy" }
+      { label: "高度确定：需要稳定的工作、收入、生活节奏", value: "certainty_seeking" },
+      { label: "中等确定：有计划，但也接受变化", value: "moderate_certainty" },
+      { label: "拥抱变化：计划赶不上变化，先干了再说", value: "change_embracing" },
+      { label: "随遇而安：去哪都行，看缘分", value: "fate_accepting" }
     ]
   },
-
-  // 工作生活平衡、未来规划
   {
     id: 28,
-    question: "对你来说，工作与生活平衡的理想状态是？",
+    question: "你欣赏的城市气质是？",
     options: [
-      { label: "拼一线城市的机会，生活压力大也可以", value: "metropolis" },
-      { label: "新一线/强二线，机会和生活都相对均衡", value: "hub" },
-      { label: "更看重生活质量和环境", value: "pastoral" },
-      { label: "短期在大城市，长期回节奏慢的城市", value: "emerging" }
+      { label: "精致小资：咖啡馆、买手店、艺术展", value: "exquisite_city" },
+      { label: "豪爽大气：大口吃肉大口喝酒，不拘小节", value: "bold_city" },
+      { label: "务实接地气：生活方便、人情味浓、不太装", value: "practical_city" },
+      { label: "文艺清新：慢节奏、有山有水、有文化氛围", value: "artistic_city" }
     ]
   },
   {
     id: 29,
-    question: "如果需要经常出差或异地往返，你更倾向？",
+    question: "你介意语言沟通问题吗？",
     options: [
-      { label: "机场和高铁枢纽城市，去哪都方便", value: "hub" },
-      { label: "靠近港口或海运枢纽", value: "port" },
-      { label: "距离多座大城市 1~2 小时高铁圈", value: "gateway" },
-      { label: "不常出差，对交通枢纽不敏感", value: "inland" }
+      { label: "非常介意：听不懂方言会焦虑，必须普通话普及", value: "language_sensitive" },
+      { label: "有点介意：希望能慢慢听懂，但长期听不懂会烦", value: "moderate_language_sensitive" },
+      { label: "不介意：方言是文化，愿意学两句", value: "language_accepting" },
+      { label: "觉得有意思：喜欢听不同方言，觉得很有特色", value: "language_appreciating" }
     ]
   },
-
-  // 总体偏好收尾题
   {
     id: 30,
-    question: "综合来说，你更接近哪一种城市性格？",
+    question: "用一个词/短语形容你理想中的\"家\"，是？",
     options: [
-      { label: "外向、开放、机会多的大城市", value: "metropolis" },
-      { label: "稳健、务实、发展中的成长型城市", value: "emerging" },
-      { label: "舒适、安逸、节奏不快的宜居城市", value: "pastoral" },
-      { label: "个性鲜明、有独特文化标签的城市", value: "historic" }
+      { label: "机会之城：能让我搞钱、成长、见世面", value: "opportunity_city" },
+      { label: "安逸之都：生活舒服、压力小、能喘口气", value: "comfortable_city" },
+      { label: "理想之地：有山有水、有文化、有同类", value: "ideal_city" },
+      { label: "自由之境：不被定义，想走就走，想留就留", value: "free_city" }
     ]
   }
 ]

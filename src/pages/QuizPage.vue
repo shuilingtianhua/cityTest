@@ -34,7 +34,7 @@
               'selected': selectedOption === option.value,
               'hovered': hoveredIndex === index
             }"
-            @click="selectOption(option.value)"
+            @click="selectOption(option.value, index)"
             @mouseenter="hoveredIndex = index"
             @mouseleave="hoveredIndex = -1"
           >
@@ -77,6 +77,7 @@ import { getItem, setItem } from '../utils/storage.js'
 const router = useRouter()
 const currentQuestionIndex = ref(0)
 const selectedOption = ref('')
+const selectedOptionIndex = ref(-1)
 const hoveredIndex = ref(-1)
 const answers = ref([])
 
@@ -90,17 +91,23 @@ const isLastQuestion = computed(() => {
   return currentQuestionIndex.value === questions.length - 1
 })
 
-function selectOption(value) {
+function selectOption(value, index) {
   selectedOption.value = value
+  selectedOptionIndex.value = index
 }
 
 function nextQuestion() {
   if (!selectedOption.value) return
 
+  // 获取选项字母 (A/B/C/D)
+  const optionLetters = ['A', 'B', 'C', 'D']
+  const selectedOptionLetter = selectedOptionIndex.value >= 0 ? optionLetters[selectedOptionIndex.value] : null
+
   // 保存答案
   answers.value.push({
     questionId: currentQuestion.value.id,
-    value: selectedOption.value
+    value: selectedOption.value,
+    option: selectedOptionLetter
   })
 
   // 保存到 localStorage
@@ -113,6 +120,7 @@ function nextQuestion() {
     // 下一题
     currentQuestionIndex.value++
     selectedOption.value = ''
+    selectedOptionIndex.value = -1
   }
 }
 
