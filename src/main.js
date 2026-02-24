@@ -31,10 +31,7 @@ router.beforeEach((to, from, next) => {
   const hasResult = !!getItem('recommendedCities')
 
   if (to.path === '/login') {
-    // 已登录直接进入流程第一页
-    if (isLoggedIn) {
-      return next('/wuxing')
-    }
+    // 允许已登录用户访问登录页
     return next()
   }
 

@@ -1,0 +1,78 @@
+// 详细测试八字计算算法
+import { getBaZi } from './src/utils/wuxing.js'
+
+// 测试用例：1997年8月10日12时，期望：丁丑年戊申月甲申日庚午时
+console.log('测试 1997年8月10日12时:')
+const result1 = getBaZi(1997, 8, 10, 12)
+console.log('年柱:', result1.year.ganZhi)
+console.log('月柱:', result1.month.ganZhi)
+console.log('日柱:', result1.day.ganZhi)
+console.log('时柱:', result1.hour.ganZhi)
+console.log('完整八字:', result1.full)
+console.log('期望结果: 丁丑年戊申月甲申日庚午时')
+console.log('------------------------')
+
+// 测试农历月份对应的公历日期
+console.log('测试 1997年7月10日12时 (农历六月初六):')
+const result2 = getBaZi(1997, 7, 10, 12)
+console.log('年柱:', result2.year.ganZhi)
+console.log('月柱:', result2.month.ganZhi)
+console.log('日柱:', result2.day.ganZhi)
+console.log('时柱:', result2.hour.ganZhi)
+console.log('完整八字:', result2.full)
+console.log('------------------------')
+
+// 测试不同年份的相同月份
+console.log('测试 2000年8月10日12时:')
+const result3 = getBaZi(2000, 8, 10, 12)
+console.log('年柱:', result3.year.ganZhi)
+console.log('月柱:', result3.month.ganZhi)
+console.log('日柱:', result3.day.ganZhi)
+console.log('时柱:', result3.hour.ganZhi)
+console.log('完整八字:', result3.full)
+console.log('------------------------')
+
+console.log('测试 2001年8月10日12时:')
+const result4 = getBaZi(2001, 8, 10, 12)
+console.log('年柱:', result4.year.ganZhi)
+console.log('月柱:', result4.month.ganZhi)
+console.log('日柱:', result4.day.ganZhi)
+console.log('时柱:', result4.hour.ganZhi)
+console.log('完整八字:', result4.full)
+console.log('------------------------')
+
+console.log('测试 2002年8月10日12时:')
+const result5 = getBaZi(2002, 8, 10, 12)
+console.log('年柱:', result5.year.ganZhi)
+console.log('月柱:', result5.month.ganZhi)
+console.log('日柱:', result5.day.ganZhi)
+console.log('时柱:', result5.hour.ganZhi)
+console.log('完整八字:', result5.full)
+console.log('------------------------')
+
+// 测试不同时辰
+console.log('测试 1997年8月10日0时:')
+const result6 = getBaZi(1997, 8, 10, 0)
+console.log('年柱:', result6.year.ganZhi)
+console.log('月柱:', result6.month.ganZhi)
+console.log('日柱:', result6.day.ganZhi)
+console.log('时柱:', result6.hour.ganZhi)
+console.log('完整八字:', result6.full)
+console.log('------------------------')
+
+console.log('测试 1997年8月10日6时:')
+const result7 = getBaZi(1997, 8, 10, 6)
+console.log('年柱:', result7.year.ganZhi)
+console.log('月柱:', result7.month.ganZhi)
+console.log('日柱:', result7.day.ganZhi)
+console.log('时柱:', result7.hour.ganZhi)
+console.log('完整八字:', result7.full)
+console.log('------------------------')
+
+console.log('测试 1997年8月10日18时:')
+const result8 = getBaZi(1997, 8, 10, 18)
+console.log('年柱:', result8.year.ganZhi)
+console.log('月柱:', result8.month.ganZhi)
+console.log('日柱:', result8.day.ganZhi)
+console.log('时柱:', result8.hour.ganZhi)
+console.log('完整八字:', result8.full)

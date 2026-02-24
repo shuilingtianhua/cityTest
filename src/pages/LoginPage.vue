@@ -11,7 +11,7 @@
           <div class="flow-title">测试流程</div>
           <ul class="flow-steps">
             <li><span class="step-index">1</span> 填写出生日期，生成你的五行画像</li>
-            <li><span class="step-index">2</span> 回答 10 道关于生活方式的小问题</li>
+            <li><span class="step-index">2</span> 回答 30 道关于生活方式的小问题</li>
             <li><span class="step-index">3</span> 获得专属的城市匹配结果和解释</li>
           </ul>
         </div>

@@ -133,12 +133,7 @@
           <div class="match-note">本结果不构成任何决策建议，只是帮你从另一个角度认识自己和城市的契合度。</div>
         </div>
 
-        <!-- 分享按钮 -->
-        <div class="share-section">
-          <button @click="shareResult" class="share-btn">
-            <span>📤 分享结果</span>
-          </button>
-        </div>
+
       </div>
 
       <!-- 加载状态 -->
@@ -179,27 +174,7 @@ function getElementIcon(element) {
   return elementIcons[element] || '✨'
 }
 
-function shareResult() {
-  const city = topCity.value
-  const shareText = `我在《你适合居住在哪个城市？》测试中，最适合我的城市是${city.name}！${city.emoji}\n\n快来看看你适合居住在哪个城市吧！`
 
-  if (navigator.share) {
-    navigator.share({
-      title: '城市测试结果',
-      text: shareText
-    }).catch(err => {
-      console.log('分享失败:', err)
-    })
-  } else {
-    // 复制到剪贴板
-    navigator.clipboard.writeText(shareText).then(() => {
-      alert('结果已复制到剪贴板！')
-    }).catch(err => {
-      console.log('复制失败:', err)
-      alert('分享失败，请手动分享')
-    })
-  }
-}
 
 function resetTest() {
   if (confirm('确定要重新开始测试吗？这将清除当前的答题记录。')) {
@@ -615,26 +590,7 @@ onMounted(() => {
   color: #888;
 }
 
-.share-section {
-  text-align: center;
-}
 
-.share-btn {
-  padding: 14px 40px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  border: none;
-  border-radius: 12px;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.share-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
-}
 
 .loading-section {
   flex: 1;

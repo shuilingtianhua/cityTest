@@ -11,12 +11,12 @@
         <div class="intro-section">
           <div class="icon">⚗️</div>
           <h3>了解你的五行属性</h3>
-          <p>根据你的出生日期，生成对应的八字和五行分布，用于在后续推荐中加入「更适合你的城市气场」。</p>
-          <p class="hint-text">如果只知道阳历生日，直接选择阳历日期即可；本工具不采集具体出生时刻。</p>
+          <p>根据你的阳历出生日期，生成对应的八字和五行分布，用于在后续推荐中加入「更适合你的城市气场」。</p>
+          <p class="hint-text">请直接输入你的阳历出生日期；本工具不采集具体出生时刻。</p>
         </div>
 
         <div class="form-section">
-          <label class="date-label">请选择你的出生日期</label>
+          <label class="date-label">请输入你的阳历出生日期</label>
           <div class="date-picker-card">
             <div class="date-picker-header">
               <div class="date-picker-icon">📅</div>
@@ -73,6 +73,38 @@
                       :value="day"
                     >
                       {{ day }} 日
+                    </option>
+                  </select>
+                </div>
+                <div class="select-wrapper">
+                  <select
+                    v-model="birthHour"
+                    class="date-input"
+                    @change="handleDatePartChange"
+                  >
+                    <option value="">时</option>
+                    <option
+                      v-for="hour in hourOptions"
+                      :key="hour"
+                      :value="hour"
+                    >
+                      {{ hour }} 时
+                    </option>
+                  </select>
+                </div>
+                <div class="select-wrapper">
+                  <select
+                    v-model="birthMinute"
+                    class="date-input"
+                    @change="handleDatePartChange"
+                  >
+                    <option value="">分</option>
+                    <option
+                      v-for="minute in minuteOptions"
+                      :key="minute"
+                      :value="minute"
+                    >
+                      {{ minute }} 分
                     </option>
                   </select>
                 </div>
@@ -163,7 +195,7 @@
 <script setup>
 import { ref, onMounted, computed } from 'vue'
 import { useRouter } from 'vue-router'
-import { getWuXingByDate } from '../utils/wuxing.js'
+import { getWuXingByDate, getBaZi, calculateWuXing as calcWuXing } from '../utils/wuxing.js'
 import { getItem, setItem, removeItem } from '../utils/storage.js'
 
 const router = useRouter()
@@ -171,12 +203,16 @@ const birthDate = ref('')
 const birthYear = ref('')
 const birthMonth = ref('')
 const birthDay = ref('')
+const birthHour = ref('')
+const birthMinute = ref('')
 const wuxingResult = ref(null)
 
 const now = new Date()
 const currentYear = now.getFullYear()
 const yearOptions = Array.from({ length: 80 }, (_, index) => currentYear - index)
 const monthOptions = Array.from({ length: 12 }, (_, index) => index + 1)
+const hourOptions = Array.from({ length: 24 }, (_, index) => index)
+const minuteOptions = Array.from({ length: 60 }, (_, index) => index)
 
 const elementIcons = {
   '金': '⚔️',
@@ -203,8 +239,21 @@ function getElementIcon(element) {
 function calculateWuXing() {
   if (!birthDate.value) return
 
-  const date = new Date(birthDate.value)
-  wuxingResult.value = getWuXingByDate(date)
+  const year = Number(birthYear.value)
+  const month = Number(birthMonth.value) // 直接使用月份值，不减去1
+  const day = Number(birthDay.value)
+  const hour = Number(birthHour.value || 12) // 默认12时
+  const minute = Number(birthMinute.value || 0) // 默认0分
+
+  // 直接调用getBaZi函数，传入正确的参数
+  const baZi = getBaZi(year, month, day, hour)
+  const wuxingInfo = calcWuXing(baZi)
+  
+  wuxingResult.value = {
+    date: birthDate.value,
+    baZi: baZi,
+    wuxing: wuxingInfo
+  }
 
   // 保存到 localStorage
   setItem('userWuxing', wuxingResult.value)
@@ -222,7 +271,10 @@ function handleDatePartChange() {
 
   const monthStr = String(month).padStart(2, '0')
   const dayStr = String(day).padStart(2, '0')
-  birthDate.value = `${year}-${monthStr}-${dayStr}`
+  const hourStr = String(birthHour.value || 12).padStart(2, '0')
+  const minuteStr = String(birthMinute.value || 0).padStart(2, '0')
+  
+  birthDate.value = `${year}-${monthStr}-${dayStr} ${hourStr}:${minuteStr}`
   calculateWuXing()
 }
 
@@ -231,6 +283,8 @@ function clearDate() {
   birthYear.value = ''
   birthMonth.value = ''
   birthDay.value = ''
+  birthHour.value = ''
+  birthMinute.value = ''
   wuxingResult.value = null
   removeItem('userWuxing')
 }
@@ -250,10 +304,16 @@ onMounted(() => {
     wuxingResult.value = savedWuxing
     birthDate.value = wuxingResult.value.date
     if (wuxingResult.value.date) {
-      const [y, m, d] = wuxingResult.value.date.split('-')
-      birthYear.value = y || ''
-      birthMonth.value = m ? Number(m) : ''
-      birthDay.value = d ? Number(d) : ''
+      // 处理日期时间格式
+      const dateTimeParts = wuxingResult.value.date.split(' ')
+      const dateParts = dateTimeParts[0].split('-')
+      const timeParts = dateTimeParts[1] ? dateTimeParts[1].split(':') : ['12', '00']
+      
+      birthYear.value = dateParts[0] || ''
+      birthMonth.value = dateParts[1] ? Number(dateParts[1]) : ''
+      birthDay.value = dateParts[2] ? Number(dateParts[2]) : ''
+      birthHour.value = timeParts[0] ? Number(timeParts[0]) : ''
+      birthMinute.value = timeParts[1] ? Number(timeParts[1]) : ''
     }
   }
 })
@@ -419,10 +479,12 @@ onMounted(() => {
   align-items: center;
   gap: 8px;
   flex: 1;
+  flex-wrap: wrap;
 }
 
 .select-wrapper {
   flex: 1;
+  min-width: 80px;
 }
 
 .date-label {
@@ -687,6 +749,19 @@ onMounted(() => {
 
   .wuxing-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .select-group {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .select-wrapper {
+    min-width: 70px;
+  }
+
+  .date-input {
+    font-size: 13px;
+    padding: 10px 12px;
   }
 }
 </style>
