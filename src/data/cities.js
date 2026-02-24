@@ -24,7 +24,39 @@ export const cities = {
       "空气质量不稳定"
     ],
     image: "🏛️",
-    emoji: "🐉"
+    emoji: "🐉",
+    answers: {
+      1: "B", // 便利启动型
+      2: "B", // 附近溜达
+      3: "B", // 看情况
+      4: "B", // 城市探索
+      5: "C", // 1小时左右
+      6: "A", // 平台依附型
+      7: "B", // 成长和空间
+      8: "B", // 中等
+      9: "A", // 必须买房
+      10: "A", // 存银行/理财
+      11: "A", // 深度绑定
+      12: "B", // 被动社交型
+      13: "B", // 适度友好
+      14: "B", // 偶尔会
+      15: "B", // 二人世界
+      16: "C", // 四季分明党
+      17: "A", // 阳光控
+      18: "B", // 一般敏感
+      19: "C", // 城市控
+      20: "C", // 都能适应
+      21: "A", // 故乡胃
+      22: "B", // 比较讲究
+      23: "B", // 偶尔有就行
+      24: "D", // 逛街体验
+      25: "A", // 地铁/公交党
+      26: "B", // 职场中坚
+      27: "B", // 中等确定
+      28: "B", // 豪爽大气
+      29: "A", // 非常介意
+      30: "A"  // 机会之城
+    }
   },
   "上海": {
     tags: [
@@ -47,7 +79,39 @@ export const cities = {
       "冬天湿冷"
     ],
     image: "🌆",
-    emoji: "🏙️"
+    emoji: "🏙️",
+    answers: {
+      1: "C", // 效率优先型
+      2: "C", // 社交时刻
+      3: "B", // 看情况
+      4: "B", // 城市探索
+      5: "C", // 1小时左右
+      6: "A", // 平台依附型
+      7: "B", // 成长和空间
+      8: "B", // 中等
+      9: "B", // 看情况
+      10: "C", // 投资房产/理财
+      11: "C", // 各自安好
+      12: "C", // 主动出击型
+      13: "A", // 互不打扰
+      14: "C", // 享受独处
+      15: "D", // 丁克/晚育
+      16: "C", // 四季分明党
+      17: "A", // 阳光控
+      18: "B", // 一般敏感
+      19: "A", // 山海控
+      20: "A", // 怕潮湿
+      21: "D", // 国际胃
+      22: "B", // 比较讲究
+      23: "B", // 偶尔有就行
+      24: "D", // 逛街体验
+      25: "A", // 地铁/公交党
+      26: "B", // 职场中坚
+      27: "C", // 拥抱变化
+      28: "A", // 精致小资
+      29: "B", // 有点介意
+      30: "A"  // 机会之城
+    }
   },
   "广州": {
     tags: [
@@ -70,7 +134,39 @@ export const cities = {
       "教育医疗资源相对较少"
     ],
     image: "🍜",
-    emoji: "🥟"
+    emoji: "🥟",
+    answers: {
+      1: "B", // 便利启动型
+      2: "C", // 社交时刻
+      3: "C", // 愿意尝试
+      4: "B", // 城市探索
+      5: "B", // 45分钟左右
+      6: "C", // 资源关系型
+      7: "B", // 成长和空间
+      8: "B", // 中等
+      9: "B", // 看情况
+      10: "B", // 投资自己
+      11: "B", // 定期联系
+      12: "C", // 主动出击型
+      13: "C", // 热热闹闹
+      14: "B", // 偶尔会
+      15: "C", // 有娃家庭
+      16: "A", // 极度怕冷
+      17: "B", // 雨雪控
+      18: "B", // 一般敏感
+      19: "A", // 山海控
+      20: "B", // 怕干燥
+      21: "A", // 故乡胃
+      22: "A", // 美食至上
+      23: "A", // 必须丰富
+      24: "A", // 下楼即达
+      25: "A", // 地铁/公交党
+      26: "B", // 职场中坚
+      27: "C", // 拥抱变化
+      28: "C", // 务实接地气
+      29: "C", // 不介意
+      30: "B"  // 安逸之都
+    }
   },
   "深圳": {
     tags: [
@@ -93,7 +189,39 @@ export const cities = {
       "工作压力大"
     ],
     image: "💻",
-    emoji: "🚀"
+    emoji: "🚀",
+    answers: {
+      1: "C", // 效率优先型
+      2: "D", // 继续搬砖
+      3: "A", // 极度排斥
+      4: "B", // 城市探索
+      5: "B", // 45分钟左右
+      6: "D", // 创业折腾型
+      7: "D", // 财务爆发
+      8: "A", // 极强
+      9: "B", // 看情况
+      10: "D", // 创业/投资朋友
+      11: "C", // 各自安好
+      12: "C", // 主动出击型
+      13: "A", // 互不打扰
+      14: "C", // 享受独处
+      15: "D", // 丁克/晚育
+      16: "A", // 极度怕冷
+      17: "A", // 阳光控
+      18: "B", // 一般敏感
+      19: "C", // 城市控
+      20: "B", // 怕干燥
+      21: "D", // 国际胃
+      22: "B", // 比较讲究
+      23: "A", // 必须丰富
+      24: "C", // 网购为主
+      25: "B", // 自驾党
+      26: "A", // 刚毕业/职场新人
+      27: "C", // 拥抱变化
+      28: "A", // 精致小资
+      29: "A", // 非常介意
+      30: "A"  // 机会之城
+    }
   },
   "杭州": {
     tags: [
@@ -116,7 +244,39 @@ export const cities = {
       "夏季炎热"
     ],
     image: "🌸",
-    emoji: "🏞️"
+    emoji: "🏞️",
+    answers: {
+      1: "A", // 自然唤醒型
+      2: "A", // 宅家充电
+      3: "B", // 看情况
+      4: "A", // 自然疗愈
+      5: "B", // 45分钟左右
+      6: "B", // 技能独立型
+      7: "B", // 成长和空间
+      8: "B", // 中等
+      9: "B", // 看情况
+      10: "B", // 投资自己
+      11: "C", // 各自安好
+      12: "B", // 被动社交型
+      13: "B", // 适度友好
+      14: "C", // 享受独处
+      15: "B", // 二人世界
+      16: "C", // 四季分明党
+      17: "B", // 雨雪控
+      18: "A", // 非常敏感
+      19: "A", // 山海控
+      20: "B", // 怕干燥
+      21: "C", // 清淡党
+      22: "B", // 比较讲究
+      23: "B", // 偶尔有就行
+      24: "D", // 逛街体验
+      25: "C", // 骑行/步行党
+      26: "B", // 职场中坚
+      27: "B", // 中等确定
+      28: "A", // 精致小资
+      29: "B", // 有点介意
+      30: "C"  // 理想之地
+    }
   },
   "成都": {
     tags: [
@@ -139,76 +299,39 @@ export const cities = {
       "夏天闷热"
     ],
     image: "🐼",
-    emoji: "🌶️"
-  },
-  "西安": {
-    tags: [
-      "four_seasons", "medium_pace", "culture", "economy",
-      "art_museum", "low_cost", "friendly", "traditional_food",
-      "top_education", "public_transport", "historic"
-    ],
-    wuxing: ["土", "金"],
-    climate: "温带季风气候，四季分明",
-    description: "古都长安，十三朝古都。这里历史遗迹众多，文化底蕴深厚，生活成本适中。适合热爱历史文化、喜欢古典氛围的人群。",
-    advantages: [
-      "历史文化深厚",
-      "教育实力强",
-      "生活成本适中",
-      "旅游资源丰富"
-    ],
-    disadvantages: [
-      "经济发展相对较慢",
-      "空气质量一般",
-      "冬季较冷"
-    ],
-    image: "🏯",
-    emoji: "🦁"
-  },
-  "苏州": {
-    tags: [
-      "four_seasons", "slow_pace", "culture", "nature",
-      "outdoor", "medium_cost", "friendly", "healthy_food",
-      "basic_education", "bike_friendly", "pastoral"
-    ],
-    wuxing: ["木", "水"],
-    climate: "亚热带季风气候，四季分明",
-    description: "人间天堂，园林之城。这里园林精致、水乡风情浓郁，宜居宜业。适合喜欢精致生活、江南水乡文化的人群。",
-    advantages: [
-      "江南园林美",
-      "生态环境好",
-      "交通便利",
-      "生活品质高"
-    ],
-    disadvantages: [
-      "房价较高",
-      "工业发达影响环境",
-      "工作机会相对较少"
-    ],
-    image: "🏮",
-    emoji: "🌊"
-  },
-  "厦门": {
-    tags: [
-      "warm_humid", "medium_pace", "culture", "nature",
-      "outdoor", "medium_cost", "friendly", "healthy_food",
-      "basic_education", "public_transport", "coastal"
-    ],
-    wuxing: ["水", "木"],
-    climate: "亚热带海洋性气候，温暖宜人",
-    description: "海上花园，滨海城市。这里风光旖旎，气候宜人，节奏舒适。适合追求海洋生活、喜欢温暖气候的人群。",
-    advantages: [
-      "环境优美，空气质量好",
-      "气候宜人",
-      "生活节奏适中",
-      "滨海风光"
-    ],
-    disadvantages: [
-      "房价较高",
-      "工作机会有限",
-      "台风影响"
-    ],
-    image: "🌴",
-    emoji: "🏖️"
+    emoji: "🌶️",
+    answers: {
+      1: "A", // 自然唤醒型
+      2: "A", // 宅家充电
+      3: "C", // 愿意尝试
+      4: "C", // 躺平休息
+      5: "B", // 45分钟左右
+      6: "B", // 技能独立型
+      7: "C", // 平衡和自由
+      8: "C", // 够用就行
+      9: "B", // 看情况
+      10: "B", // 投资自己
+      11: "B", // 定期联系
+      12: "B", // 被动社交型
+      13: "C", // 热热闹闹
+      14: "D", // 有宠物就够了
+      15: "C", // 有娃家庭
+      16: "D", // 无所谓
+      17: "B", // 雨雪控
+      18: "B", // 一般敏感
+      19: "B", // 山川控
+      20: "B", // 怕干燥
+      21: "B", // 重口味党
+      22: "A", // 美食至上
+      23: "A", // 必须丰富
+      24: "A", // 下楼即达
+      25: "B", // 自驾党
+      26: "C", // 成家立业期
+      27: "B", // 中等确定
+      28: "C", // 务实接地气
+      29: "C", // 不介意
+      30: "B"  // 安逸之都
+    }
   },
   "重庆": {
     tags: [
@@ -231,49 +354,39 @@ export const cities = {
       "空气质量不稳定"
     ],
     image: "🌶️",
-    emoji: "🏔️"
-  },
-  "天津": {
-    tags: [
-      "four_seasons", "medium_pace", "economy", "culture",
-      "shopping_food", "medium_cost", "friendly", "traditional_food",
-      "basic_education", "public_transport", "coastal"
-    ],
-    wuxing: ["金", "水"],
-    climate: "温带季风气候，四季分明，冬季较冷",
-    description: "北方港口城市，海河穿城而过，中西合璧的城市风格鲜明。",
-    advantages: [
-      "靠近首都，区位优势明显",
-      "近海气息和老街风情并存",
-      "生活节奏相对适中"
-    ],
-    disadvantages: [
-      "产业结构相对传统",
-      "冬季风大体感偏冷"
-    ],
-    image: "⚓",
-    emoji: "🌉"
-  },
-  "南京": {
-    tags: [
-      "four_seasons", "medium_pace", "culture", "economy",
-      "art_museum", "medium_cost", "friendly", "traditional_food",
-      "top_education", "public_transport", "historic"
-    ],
-    wuxing: ["水", "土"],
-    climate: "亚热带季风气候，夏热冬冷，四季分明",
-    description: "历史古都与现代城市叠加，既有人文厚度也有产业基础。",
-    advantages: [
-      "高校云集，科教资源强",
-      "城市绿化和山水格局好",
-      "生活氛围兼具烟火气与文艺感"
-    ],
-    disadvantages: [
-      "夏季炎热潮湿",
-      "部分时段交通拥堵"
-    ],
-    image: "🏯",
-    emoji: "🌉"
+    emoji: "🏔️",
+    answers: {
+      1: "B", // 便利启动型
+      2: "C", // 社交时刻
+      3: "C", // 愿意尝试
+      4: "B", // 城市探索
+      5: "B", // 45分钟左右
+      6: "D", // 创业折腾型
+      7: "B", // 成长和空间
+      8: "B", // 中等
+      9: "B", // 看情况
+      10: "C", // 投资房产/理财
+      11: "B", // 定期联系
+      12: "C", // 主动出击型
+      13: "C", // 热热闹闹
+      14: "B", // 偶尔会
+      15: "C", // 有娃家庭
+      16: "A", // 极度怕冷
+      17: "B", // 雨雪控
+      18: "B", // 一般敏感
+      19: "B", // 山川控
+      20: "B", // 怕干燥
+      21: "B", // 重口味党
+      22: "A", // 美食至上
+      23: "A", // 必须丰富
+      24: "A", // 下楼即达
+      25: "B", // 自驾党
+      26: "C", // 成家立业期
+      27: "C", // 拥抱变化
+      28: "C", // 务实接地气
+      29: "C", // 不介意
+      30: "B"  // 安逸之都
+    }
   },
   "武汉": {
     tags: [
@@ -294,7 +407,94 @@ export const cities = {
       "雨雪天气湿冷"
     ],
     image: "🌉",
-    emoji: "🐟"
+    emoji: "🐟",
+    answers: {
+      1: "B", // 便利启动型
+      2: "B", // 附近溜达
+      3: "B", // 看情况
+      4: "B", // 城市探索
+      5: "C", // 1小时左右
+      6: "A", // 平台依附型
+      7: "B", // 成长和空间
+      8: "B", // 中等
+      9: "B", // 看情况
+      10: "B", // 投资自己
+      11: "B", // 定期联系
+      12: "B", // 被动社交型
+      13: "B", // 适度友好
+      14: "B", // 偶尔会
+      15: "C", // 有娃家庭
+      16: "A", // 极度怕冷
+      17: "B", // 雨雪控
+      18: "B", // 一般敏感
+      19: "A", // 山海控
+      20: "B", // 怕干燥
+      21: "B", // 重口味党
+      22: "B", // 比较讲究
+      23: "B", // 偶尔有就行
+      24: "D", // 逛街体验
+      25: "A", // 地铁/公交党
+      26: "B", // 职场中坚
+      27: "B", // 中等确定
+      28: "C", // 务实接地气
+      29: "B", // 有点介意
+      30: "A"  // 机会之城
+    }
+  },
+  "西安": {
+    tags: [
+      "four_seasons", "medium_pace", "culture", "economy",
+      "art_museum", "low_cost", "friendly", "traditional_food",
+      "top_education", "public_transport", "historic"
+    ],
+    wuxing: ["土", "金"],
+    climate: "温带季风气候，四季分明",
+    description: "古都长安，十三朝古都。这里历史遗迹众多，文化底蕴深厚，生活成本适中。适合热爱历史文化、喜欢古典氛围的人群。",
+    advantages: [
+      "历史文化深厚",
+      "教育实力强",
+      "生活成本适中",
+      "旅游资源丰富"
+    ],
+    disadvantages: [
+      "经济发展相对较慢",
+      "空气质量一般",
+      "冬季较冷"
+    ],
+    image: "🏯",
+    emoji: "🦁",
+    answers: {
+      1: "B", // 便利启动型
+      2: "A", // 宅家充电
+      3: "B", // 看情况
+      4: "B", // 城市探索
+      5: "B", // 45分钟左右
+      6: "A", // 平台依附型
+      7: "A", // 稳定和安全
+      8: "C", // 够用就行
+      9: "A", // 必须买房
+      10: "A", // 存银行/理财
+      11: "A", // 深度绑定
+      12: "B", // 被动社交型
+      13: "C", // 热热闹闹
+      14: "B", // 偶尔会
+      15: "C", // 有娃家庭
+      16: "C", // 四季分明党
+      17: "A", // 阳光控
+      18: "B", // 一般敏感
+      19: "C", // 城市控
+      20: "A", // 怕潮湿
+      21: "A", // 故乡胃
+      22: "B", // 比较讲究
+      23: "B", // 偶尔有就行
+      24: "D", // 逛街体验
+      25: "A", // 地铁/公交党
+      26: "C", // 成家立业期
+      27: "A", // 高度确定
+      28: "B", // 豪爽大气
+      29: "A", // 非常介意
+      30: "B"  // 安逸之都
+    }
   },
   "长沙": {
     tags: [
@@ -315,49 +515,39 @@ export const cities = {
       "部分区域交通压力大"
     ],
     image: "🎵",
-    emoji: "🌶️"
-  },
-  "郑州": {
-    tags: [
-      "four_seasons", "fast_pace", "economy", "culture",
-      "shopping_food", "medium_cost", "bustling", "traditional_food",
-      "basic_education", "public_transport", "hub"
-    ],
-    wuxing: ["土", "金"],
-    climate: "温带季风气候，四季分明，夏季炎热",
-    description: "国家级综合交通枢纽，中原城市群的核心城市。",
-    advantages: [
-      "铁路、公路、航空枢纽明显",
-      "消费水平适中",
-      "区域发展潜力大"
-    ],
-    disadvantages: [
-      "夏季炎热干燥",
-      "城市景观相对传统"
-    ],
-    image: "🚉",
-    emoji: "🏙️"
-  },
-  "合肥": {
-    tags: [
-      "four_seasons", "fast_pace", "innovation", "economy",
-      "shopping_food", "medium_cost", "friendly", "traditional_food",
-      "top_education", "public_transport", "emerging"
-    ],
-    wuxing: ["木", "土"],
-    climate: "亚热带季风气候，四季分明",
-    description: "近年崛起的新一线城市，科创产业和制造业快速发展。",
-    advantages: [
-      "科研机构和高校聚集",
-      "产业发展势头好",
-      "房价相对一线城市更友好"
-    ],
-    disadvantages: [
-      "城市配套仍在完善",
-      "夏季高温闷热"
-    ],
-    image: "🔬",
-    emoji: "🌾"
+    emoji: "🌶️",
+    answers: {
+      1: "B", // 便利启动型
+      2: "C", // 社交时刻
+      3: "C", // 愿意尝试
+      4: "B", // 城市探索
+      5: "B", // 45分钟左右
+      6: "D", // 创业折腾型
+      7: "C", // 平衡和自由
+      8: "B", // 中等
+      9: "B", // 看情况
+      10: "B", // 投资自己
+      11: "B", // 定期联系
+      12: "C", // 主动出击型
+      13: "C", // 热热闹闹
+      14: "B", // 偶尔会
+      15: "B", // 二人世界
+      16: "A", // 极度怕冷
+      17: "B", // 雨雪控
+      18: "B", // 一般敏感
+      19: "C", // 城市控
+      20: "B", // 怕干燥
+      21: "B", // 重口味党
+      22: "A", // 美食至上
+      23: "A", // 必须丰富
+      24: "D", // 逛街体验
+      25: "A", // 地铁/公交党
+      26: "B", // 职场中坚
+      27: "C", // 拥抱变化
+      28: "C", // 务实接地气
+      29: "C", // 不介意
+      30: "B"  // 安逸之都
+    }
   },
   "青岛": {
     tags: [
@@ -378,295 +568,94 @@ export const cities = {
       "旅游旺季人流较多"
     ],
     image: "🍺",
-    emoji: "🌊"
+    emoji: "🌊",
+    answers: {
+      1: "A", // 自然唤醒型
+      2: "A", // 宅家充电
+      3: "B", // 看情况
+      4: "A", // 自然疗愈
+      5: "B", // 45分钟左右
+      6: "B", // 技能独立型
+      7: "C", // 平衡和自由
+      8: "B", // 中等
+      9: "B", // 看情况
+      10: "B", // 投资自己
+      11: "C", // 各自安好
+      12: "B", // 被动社交型
+      13: "B", // 适度友好
+      14: "C", // 享受独处
+      15: "B", // 二人世界
+      16: "B", // 极度怕热
+      17: "A", // 阳光控
+      18: "A", // 非常敏感
+      19: "A", // 山海控
+      20: "A", // 怕潮湿
+      21: "D", // 国际胃
+      22: "B", // 比较讲究
+      23: "B", // 偶尔有就行
+      24: "D", // 逛街体验
+      25: "A", // 地铁/公交党
+      26: "C", // 成家立业期
+      27: "B", // 中等确定
+      28: "D", // 文艺清新
+      29: "B", // 有点介意
+      30: "C"  // 理想之地
+    }
   },
-  "济南": {
+  "厦门": {
     tags: [
-      "four_seasons", "medium_pace", "culture", "economy",
-      "outdoor", "medium_cost", "friendly", "traditional_food",
-      "basic_education", "public_transport", "historic"
-    ],
-    wuxing: ["水", "土"],
-    climate: "温带季风气候，四季分明，夏热冬冷",
-    description: "泉水之城，老城区泉群与新城区交织发展。",
-    advantages: [
-      "泉水与湖景资源独特",
-      "生活节奏相对平稳",
-      "物价相对一线城市更低"
-    ],
-    disadvantages: [
-      "夏季炎热",
-      "空气干燥时略有浮尘"
-    ],
-    image: "💧",
-    emoji: "🏞️"
-  },
-  "福州": {
-    tags: [
-      "warm_humid", "medium_pace", "economy", "culture",
-      "shopping_food", "medium_cost", "friendly", "traditional_food",
-      "basic_education", "coastal", "public_transport"
+      "warm_humid", "medium_pace", "culture", "nature",
+      "outdoor", "medium_cost", "friendly", "healthy_food",
+      "basic_education", "public_transport", "coastal"
     ],
     wuxing: ["水", "木"],
-    climate: "亚热带季风气候，冬季温和，夏季炎热多雨",
-    description: "滨海省会城市，依山面海，闽菜和茶文化浓厚。",
+    climate: "亚热带海洋性气候，温暖宜人",
+    description: "海上花园，滨海城市。这里风光旖旎，气候宜人，节奏舒适。适合追求海洋生活、喜欢温暖气候的人群。",
     advantages: [
-      "气候总体偏暖",
-      "海景与山景兼具",
-      "生活节奏不算太快"
+      "环境优美，空气质量好",
+      "气候宜人",
+      "生活节奏适中",
+      "滨海风光"
     ],
     disadvantages: [
-      "梅雨季节偏潮湿",
-      "台风天气偶有影响"
+      "房价较高",
+      "工作机会有限",
+      "台风影响"
     ],
     image: "🌴",
-    emoji: "🌊"
-  },
-  "南昌": {
-    tags: [
-      "four_seasons", "medium_pace", "culture", "economy",
-      "shopping_food", "medium_cost", "friendly", "traditional_food",
-      "basic_education", "public_transport", "historic"
-    ],
-    wuxing: ["火", "水"],
-    climate: "亚热带季风气候，夏季高温明显",
-    description: "赣江穿城而过的英雄城，新区建设与老城记忆并存。",
-    advantages: [
-      "城市规模适中，节奏不算太快",
-      "靠水而居，滨江景观不错"
-    ],
-    disadvantages: [
-      "夏季炎热潮湿",
-      "产业结构仍在升级中"
-    ],
-    image: "🏙️",
-    emoji: "🔥"
-  },
-  "沈阳": {
-    tags: [
-      "four_seasons", "medium_pace", "economy", "culture",
-      "shopping_food", "medium_cost", "friendly", "traditional_food",
-      "basic_education", "public_transport", "historic"
-    ],
-    wuxing: ["金", "土"],
-    climate: "温带季风气候，冬季寒冷漫长",
-    description: "东北老工业基地，近年也在发展服务业和新兴产业。",
-    advantages: [
-      "城市底盘大，生活配套完善",
-      "物价整体不高",
-      "饮食以东北菜为主，口味豪爽"
-    ],
-    disadvantages: [
-      "冬季漫长寒冷",
-      "部分工业区环境较粗犷"
-    ],
-    image: "🏭",
-    emoji: "❄️"
-  },
-  "大连": {
-    tags: [
-      "four_seasons", "medium_pace", "economy", "nature",
-      "outdoor", "medium_cost", "friendly", "coastal",
-      "basic_education", "public_transport", "tourism"
-    ],
-    wuxing: ["水", "金"],
-    climate: "海洋性气候特征明显，夏季凉爽，冬季多风",
-    description: "东北沿海港口城市，海岸线绵长，城市景观干净整洁。",
-    advantages: [
-      "海滨风光好，宜居度较高",
-      "夏天体感舒适",
-      "城市环境整洁"
-    ],
-    disadvantages: [
-      "冬季偏冷且多风",
-      "城市地形起伏较多"
-    ],
-    image: "🌊",
-    emoji: "⚓"
-  },
-  "哈尔滨": {
-    tags: [
-      "four_seasons", "slow_pace", "culture", "tourism",
-      "shopping_food", "low_cost", "friendly", "traditional_food",
-      "basic_education", "public_transport", "historic"
-    ],
-    wuxing: ["水", "金"],
-    climate: "寒温带大陆性季风气候，冬季漫长寒冷",
-    description: "冰雪之城，冬季冰雕与欧式建筑形成独特景致。",
-    advantages: [
-      "冬季冰雪旅游资源突出",
-      "生活成本相对较低",
-      "城市节奏偏慢"
-    ],
-    disadvantages: [
-      "冬季气温极低",
-      "取暖季时间较长"
-    ],
-    image: "❄️",
-    emoji: "🏰"
-  },
-  "长春": {
-    tags: [
-      "four_seasons", "medium_pace", "economy", "culture",
-      "shopping_food", "low_cost", "friendly", "traditional_food",
-      "basic_education", "public_transport", "historic"
-    ],
-    wuxing: ["木", "土"],
-    climate: "温带季风气候，冬季寒冷漫长",
-    description: "老工业与电影文化都较有名气的北方城市。",
-    advantages: [
-      "生活成本不高",
-      "城市绿化不错",
-      "节奏不算紧张"
-    ],
-    disadvantages: [
-      "冬季比较长且冷",
-      "产业转型仍在推进"
-    ],
-    image: "🎬",
-    emoji: "❄️"
-  },
-  "石家庄": {
-    tags: [
-      "four_seasons", "fast_pace", "economy", "hub",
-      "shopping_food", "medium_cost", "bustling", "traditional_food",
-      "basic_education", "car_friendly", "gateway"
-    ],
-    wuxing: ["土", "金"],
-    climate: "温带大陆性气候，夏热冬冷，降雨集中在夏季",
-    description: "华北平原上的交通要冲，服务于京津冀区域。",
-    advantages: [
-      "交通条件便利",
-      "生活成本适中"
-    ],
-    disadvantages: [
-      "城市景观相对普通",
-      "夏季炎热干燥"
-    ],
-    image: "🚆",
-    emoji: "🏙️"
-  },
-  "太原": {
-    tags: [
-      "four_seasons", "medium_pace", "culture", "economy",
-      "shopping_food", "medium_cost", "friendly", "traditional_food",
-      "basic_education", "car_friendly", "historic"
-    ],
-    wuxing: ["金", "土"],
-    climate: "温带大陆性气候，冬季寒冷干燥",
-    description: "山西省会，背靠黄土高原，周边古迹众多。",
-    advantages: [
-      "面食文化丰富",
-      "周边旅游资源多",
-      "城市规模适中"
-    ],
-    disadvantages: [
-      "冬季干冷",
-      "整体产业结构较传统"
-    ],
-    image: "🥟",
-    emoji: "🏯"
-  },
-  "呼和浩特": {
-    tags: [
-      "four_seasons", "medium_pace", "culture", "nature",
-      "outdoor", "low_cost", "friendly", "traditional_food",
-      "basic_education", "car_friendly", "pastoral"
-    ],
-    wuxing: ["土", "金"],
-    climate: "温带大陆性气候，日照强烈，昼夜温差大",
-    description: "草原门户城市，民族风情和现代生活交织。",
-    advantages: [
-      "生活成本较低",
-      "接近草原自然环境"
-    ],
-    disadvantages: [
-      "冬季寒冷多风",
-      "城市节奏略慢，就业机会有限"
-    ],
-    image: "🐎",
-    emoji: "🌾"
-  },
-  "乌鲁木齐": {
-    tags: [
-      "four_seasons", "medium_pace", "economy", "culture",
-      "shopping_food", "low_cost", "friendly", "traditional_food",
-      "basic_education", "hub", "inland"
-    ],
-    wuxing: ["土", "火"],
-    climate: "温带大陆性干旱气候，昼夜温差大",
-    description: "西北重要中心城市，民族文化与自然景观都颇具特色。",
-    advantages: [
-      "干燥少雨，天空通透感强",
-      "美食多样，物价相对不高"
-    ],
-    disadvantages: [
-      "冬季寒冷时间较长",
-      "距离东部沿海较远"
-    ],
-    image: "🏜️",
-    emoji: "🌄"
-  },
-  "兰州": {
-    tags: [
-      "four_seasons", "medium_pace", "culture", "economy",
-      "shopping_food", "low_cost", "friendly", "traditional_food",
-      "basic_education", "inland", "hub"
-    ],
-    wuxing: ["土", "火"],
-    climate: "温带大陆性气候，干燥少雨",
-    description: "黄河穿城而过的西北城市，以牛肉面和黄河风情著称。",
-    advantages: [
-      "气候相对干燥少霾",
-      "生活成本不高"
-    ],
-    disadvantages: [
-      "植被相对较少",
-      "冬季偏冷干燥"
-    ],
-    image: "🍜",
-    emoji: "🏞️"
-  },
-  "西宁": {
-    tags: [
-      "four_seasons", "slow_pace", "nature", "culture",
-      "outdoor", "low_cost", "friendly", "healthy_food",
-      "basic_education", "inland", "pastoral"
-    ],
-    wuxing: ["水", "土"],
-    climate: "高原性气候，夏季凉爽，冬季寒冷",
-    description: "青藏高原门户城市，气候凉爽，民族氛围多元。",
-    advantages: [
-      "夏季清凉宜人",
-      "接近高原自然风光"
-    ],
-    disadvantages: [
-      "海拔较高，部分人需适应",
-      "冬季比较寒冷"
-    ],
-    image: "🏔️",
-    emoji: "🌤️"
-  },
-  "南宁": {
-    tags: [
-      "warm_humid", "medium_pace", "nature", "economy",
-      "outdoor", "medium_cost", "friendly", "healthy_food",
-      "basic_education", "coastal", "pastoral"
-    ],
-    wuxing: ["木", "水"],
-    climate: "亚热带季风气候，冬季温和，夏季炎热多雨",
-    description: "绿城之称，植被覆盖率高，靠近东盟市场。",
-    advantages: [
-      "全年绿色植被充足",
-      "气候总体偏暖",
-      "生活节奏较舒缓"
-    ],
-    disadvantages: [
-      "夏季闷热且降雨多",
-      "台风外围影响时有出现"
-    ],
-    image: "🌳",
-    emoji: "🌺"
+    emoji: "🏖️",
+    answers: {
+      1: "A", // 自然唤醒型
+      2: "A", // 宅家充电
+      3: "B", // 看情况
+      4: "A", // 自然疗愈
+      5: "B", // 45分钟左右
+      6: "B", // 技能独立型
+      7: "C", // 平衡和自由
+      8: "B", // 中等
+      9: "B", // 看情况
+      10: "B", // 投资自己
+      11: "C", // 各自安好
+      12: "B", // 被动社交型
+      13: "B", // 适度友好
+      14: "C", // 享受独处
+      15: "B", // 二人世界
+      16: "A", // 极度怕冷
+      17: "A", // 阳光控
+      18: "A", // 非常敏感
+      19: "A", // 山海控
+      20: "B", // 怕干燥
+      21: "C", // 清淡党
+      22: "B", // 比较讲究
+      23: "B", // 偶尔有就行
+      24: "D", // 逛街体验
+      25: "A", // 地铁/公交党
+      26: "C", // 成家立业期
+      27: "B", // 中等确定
+      28: "D", // 文艺清新
+      29: "B", // 有点介意
+      30: "C"  // 理想之地
+    }
   },
   "昆明": {
     tags: [
@@ -687,347 +676,147 @@ export const cities = {
       "早晚温差相对较大"
     ],
     image: "🌸",
-    emoji: "🌤️"
+    emoji: "🌤️",
+    answers: {
+      1: "A", // 自然唤醒型
+      2: "A", // 宅家充电
+      3: "C", // 愿意尝试
+      4: "A", // 自然疗愈
+      5: "B", // 45分钟左右
+      6: "B", // 技能独立型
+      7: "C", // 平衡和自由
+      8: "C", // 够用就行
+      9: "B", // 看情况
+      10: "B", // 投资自己
+      11: "C", // 各自安好
+      12: "B", // 被动社交型
+      13: "B", // 适度友好
+      14: "C", // 享受独处
+      15: "D", // 丁克/晚育
+      16: "D", // 无所谓
+      17: "A", // 阳光控
+      18: "A", // 非常敏感
+      19: "B", // 山川控
+      20: "C", // 都能适应
+      21: "C", // 清淡党
+      22: "B", // 比较讲究
+      23: "B", // 偶尔有就行
+      24: "C", // 网购为主
+      25: "C", // 骑行/步行党
+      26: "D", // 中年/成熟期
+      27: "D", // 随遇而安
+      28: "D", // 文艺清新
+      29: "C", // 不介意
+      30: "D"  // 自由之境
+    }
   },
-  "贵阳": {
+  "大连": {
     tags: [
-      "four_seasons", "slow_pace", "nature", "tourism",
-      "outdoor", "medium_cost", "friendly", "healthy_food",
-      "basic_education", "pastoral", "inland"
+      "four_seasons", "medium_pace", "economy", "nature",
+      "outdoor", "medium_cost", "friendly", "coastal",
+      "basic_education", "public_transport", "tourism"
     ],
-    wuxing: ["木", "水"],
-    climate: "亚热带湿润温和气候，夏季凉爽多雨",
-    description: "森林覆盖率高的避暑城市，自然环境清凉湿润。",
+    wuxing: ["水", "金"],
+    climate: "海洋性气候特征明显，夏季凉爽，冬季多风",
+    description: "东北沿海港口城市，海岸线绵长，城市景观干净整洁。",
     advantages: [
-      "夏季凉爽，是避暑胜地",
-      "空气湿润，绿化好"
+      "海滨风光好，宜居度较高",
+      "夏天体感舒适",
+      "城市环境整洁"
     ],
     disadvantages: [
-      "阴雨天较多，日照偏少",
-      "产业发展仍在加速中"
+      "冬季偏冷且多风",
+      "城市地形起伏较多"
     ],
-    image: "🌧️",
-    emoji: "🌲"
+    image: "🌊",
+    emoji: "⚓",
+    answers: {
+      1: "A", // 自然唤醒型
+      2: "A", // 宅家充电
+      3: "B", // 看情况
+      4: "A", // 自然疗愈
+      5: "B", // 45分钟左右
+      6: "B", // 技能独立型
+      7: "C", // 平衡和自由
+      8: "B", // 中等
+      9: "B", // 看情况
+      10: "B", // 投资自己
+      11: "B", // 定期联系
+      12: "B", // 被动社交型
+      13: "B", // 适度友好
+      14: "C", // 享受独处
+      15: "B", // 二人世界
+      16: "B", // 极度怕热
+      17: "A", // 阳光控
+      18: "A", // 非常敏感
+      19: "A", // 山海控
+      20: "A", // 怕潮湿
+      21: "A", // 故乡胃
+      22: "B", // 比较讲究
+      23: "B", // 偶尔有就行
+      24: "D", // 逛街体验
+      25: "A", // 地铁/公交党
+      26: "C", // 成家立业期
+      27: "B", // 中等确定
+      28: "B", // 豪爽大气
+      29: "A", // 非常介意
+      30: "C"  // 理想之地
+    }
   },
-  "拉萨": {
+  "苏州": {
     tags: [
       "four_seasons", "slow_pace", "culture", "nature",
       "outdoor", "medium_cost", "friendly", "healthy_food",
-      "basic_education", "pastoral", "inland"
-    ],
-    wuxing: ["火", "土"],
-    climate: "高原山地气候，日照充足，昼夜温差大",
-    description: "雪域高原的圣城，宗教文化浓厚，阳光充沛。",
-    advantages: [
-      "日照时间长，天空通透",
-      "宗教与人文气息独特"
-    ],
-    disadvantages: [
-      "海拔高，对身体适应性有要求",
-      "冬季寒冷且干燥"
-    ],
-    image: "🕍",
-    emoji: "☀️"
-  },
-  "海口": {
-    tags: [
-      "warm_humid", "slow_pace", "coastal", "nature",
-      "outdoor", "medium_cost", "friendly", "healthy_food",
-      "basic_education", "public_transport", "tourism"
-    ],
-    wuxing: ["水", "木"],
-    climate: "热带海洋性季风气候，冬季温暖",
-    description: "海南省会，气候温暖湿润，适合喜欢冬季避寒的人群。",
-    advantages: [
-      "冬季温暖宜人",
-      "海景与慢生活并存"
-    ],
-    disadvantages: [
-      "夏季炎热且湿度大",
-      "台风季节风险较高"
-    ],
-    image: "🏝️",
-    emoji: "🌴"
-  },
-  "三亚": {
-    tags: [
-      "warm_humid", "slow_pace", "coastal", "tourism",
-      "outdoor", "high_cost", "friendly", "healthy_food",
-      "basic_education", "nature", "resort"
-    ],
-    wuxing: ["水", "火"],
-    climate: "热带海洋性季风气候，全年高温多阳光",
-    description: "知名度极高的海滨度假城市，海湾与沙滩资源丰富。",
-    advantages: [
-      "海水沙滩质量好",
-      "冬季阳光充足适合度假"
-    ],
-    disadvantages: [
-      "旅游区消费水平高",
-      "旺季人流集中"
-    ],
-    image: "🏖️",
-    emoji: "🌞"
-  },
-  "珠海": {
-    tags: [
-      "warm_humid", "slow_pace", "coastal", "economy",
-      "outdoor", "high_cost", "friendly", "healthy_food",
-      "basic_education", "bike_friendly", "tourism"
-    ],
-    wuxing: ["水", "木"],
-    climate: "亚热带海洋性季风气候，气候温暖湿润",
-    description: "宜居海滨城市，城市绿化好，配套相对精致。",
-    advantages: [
-      "空气质量较好，景色宜人",
-      "生活节奏舒缓"
-    ],
-    disadvantages: [
-      "房价水平较高",
-      "城市面积相对不大"
-    ],
-    image: "🌊",
-    emoji: "🐚"
-  },
-  "中山": {
-    tags: [
-      "warm_humid", "medium_pace", "economy", "nature",
-      "shopping_food", "medium_cost", "friendly", "traditional_food",
-      "basic_education", "car_friendly", "pastoral"
-    ],
-    wuxing: ["木", "水"],
-    climate: "亚热带季风气候，温暖湿润",
-    description: "珠三角内的生活型城市，产业与宜居属性兼具。",
-    advantages: [
-      "生活节奏适中",
-      "与周边大城市联动紧密"
-    ],
-    disadvantages: [
-      "通勤可能依赖私家车",
-      "夏季湿热感较强"
-    ],
-    image: "🏡",
-    emoji: "🌤️"
-  },
-  "东莞": {
-    tags: [
-      "warm_humid", "fast_pace", "economy", "innovation",
-      "shopping_food", "medium_cost", "bustling", "casual_food",
-      "basic_education", "car_friendly", "manufacture"
-    ],
-    wuxing: ["火", "木"],
-    climate: "亚热带季风气候，夏季炎热多雨",
-    description: "制造业和外贸产业高度发达的城市，产业机会多。",
-    advantages: [
-      "就业机会丰富",
-      "毗邻广州深圳，联动强"
-    ],
-    disadvantages: [
-      "部分区域以工业景观为主",
-      "夏季闷热"
-    ],
-    image: "🏭",
-    emoji: "🚚"
-  },
-  "佛山": {
-    tags: [
-      "warm_humid", "medium_pace", "economy", "culture",
-      "shopping_food", "medium_cost", "friendly", "traditional_food",
-      "basic_education", "car_friendly", "manufacture"
-    ],
-    wuxing: ["火", "土"],
-    climate: "亚热带季风气候，夏季炎热湿润",
-    description: "珠三角重要制造业城市，同时也是岭南文化重镇。",
-    advantages: [
-      "产业基础扎实，就业面广",
-      "与广州一体化程度高"
-    ],
-    disadvantages: [
-      "夏季高温湿热",
-      "工业区环境相对嘈杂"
-    ],
-    image: "🥋",
-    emoji: "🏙️"
-  },
-  "无锡": {
-    tags: [
-      "four_seasons", "medium_pace", "economy", "nature",
-      "outdoor", "medium_cost", "friendly", "healthy_food",
-      "basic_education", "public_transport", "pastoral"
-    ],
-    wuxing: ["木", "水"],
-    climate: "亚热带季风气候，四季分明",
-    description: "太湖之滨的城市，既有工业实力也有湖湾风光。",
-    advantages: [
-      "靠近太湖，自然景观佳",
-      "上海南京等城市通达性好"
-    ],
-    disadvantages: [
-      "夏季湿热",
-      "旅游旺季景区人多"
-    ],
-    image: "🌅",
-    emoji: "🚤"
-  },
-  "宁波": {
-    tags: [
-      "four_seasons", "medium_pace", "economy", "coastal",
-      "shopping_food", "medium_cost", "friendly", "traditional_food",
-      "basic_education", "public_transport", "port"
-    ],
-    wuxing: ["水", "金"],
-    climate: "亚热带季风气候，夏季炎热多雨",
-    description: "重要港口城市，民营经济活跃，靠海且接近上海。",
-    advantages: [
-      "海港资源和产业基础好",
-      "生活节奏相对不算太快"
-    ],
-    disadvantages: [
-      "梅雨季偏潮湿",
-      "夏季高温时体感闷热"
-    ],
-    image: "⚓",
-    emoji: "🌊"
-  },
-  "温州": {
-    tags: [
-      "four_seasons", "fast_pace", "economy", "coastal",
-      "shopping_food", "medium_cost", "bustling", "traditional_food",
-      "basic_education", "car_friendly", "entrepreneur"
-    ],
-    wuxing: ["火", "木"],
-    climate: "亚热带季风气候，夏季炎热多雨",
-    description: "民营经济非常活跃，有“商人之城”的标签。",
-    advantages: [
-      "民营经济和商业氛围浓厚",
-      "沿海山海景观兼具"
-    ],
-    disadvantages: [
-      "夏季闷热",
-      "台风季偶有影响"
-    ],
-    image: "💼",
-    emoji: "🌊"
-  },
-  "嘉兴": {
-    tags: [
-      "four_seasons", "slow_pace", "economy", "nature",
-      "outdoor", "medium_cost", "friendly", "traditional_food",
       "basic_education", "bike_friendly", "pastoral"
     ],
     wuxing: ["木", "水"],
     climate: "亚热带季风气候，四季分明",
-    description: "江南水乡城市，乌镇等古镇为其增色不少。",
+    description: "人间天堂，园林之城。这里园林精致、水乡风情浓郁，宜居宜业。适合喜欢精致生活、江南水乡文化的人群。",
     advantages: [
-      "水乡气质浓，生活节奏舒缓",
-      "离上海杭州都不远"
+      "江南园林美",
+      "生态环境好",
+      "交通便利",
+      "生活品质高"
     ],
     disadvantages: [
-      "夏季潮湿闷热",
-      "城市中心区不算很大"
+      "房价较高",
+      "工业发达影响环境",
+      "工作机会相对较少"
     ],
-    image: "🏞️",
-    emoji: "🚣"
-  },
-  "绍兴": {
-    tags: [
-      "four_seasons", "slow_pace", "culture", "nature",
-      "outdoor", "medium_cost", "friendly", "traditional_food",
-      "basic_education", "bike_friendly", "historic"
-    ],
-    wuxing: ["木", "水"],
-    climate: "亚热带季风气候，四季分明",
-    description: "古城文化深厚，黄酒和水乡小桥构成独特风貌。",
-    advantages: [
-      "历史文化氛围强",
-      "居住环境较安静"
-    ],
-    disadvantages: [
-      "城市节奏偏慢，对追求高强度机会的人略单调",
-      "夏季闷热"
-    ],
-    image: "🍶",
-    emoji: "🏯"
-  },
-  "金华": {
-    tags: [
-      "four_seasons", "medium_pace", "economy", "nature",
-      "shopping_food", "medium_cost", "friendly", "traditional_food",
-      "basic_education", "car_friendly", "pastoral"
-    ],
-    wuxing: ["木", "土"],
-    climate: "亚热带季风气候，四季分明",
-    description: "内陆浙中城市，周边有不少山水景区与古镇。",
-    advantages: [
-      "生活成本适中",
-      "自然环境和城市体量平衡"
-    ],
-    disadvantages: [
-      "与沿海大城市相比机会相对少",
-      "夏季炎热"
-    ],
-    image: "⛰️",
-    emoji: "🏘️"
-  },
-  "台州": {
-    tags: [
-      "four_seasons", "medium_pace", "coastal", "economy",
-      "outdoor", "medium_cost", "friendly", "traditional_food",
-      "basic_education", "car_friendly", "manufacture"
-    ],
-    wuxing: ["水", "木"],
-    climate: "亚热带季风气候，夏季多雨",
-    description: "山海相依的城市，制造业和渔业都较发达。",
-    advantages: [
-      "海岸线和山地景观丰富",
-      "产业基础稳"
-    ],
-    disadvantages: [
-      "台风季节需注意防护",
-      "夏季湿热"
-    ],
-    image: "⚓",
-    emoji: "🌊"
-  },
-  "泉州": {
-    tags: [
-      "warm_humid", "medium_pace", "coastal", "culture",
-      "shopping_food", "medium_cost", "friendly", "traditional_food",
-      "basic_education", "historic", "pastoral"
-    ],
-    wuxing: ["水", "木"],
-    climate: "亚热带海洋性季风气候，冬季温和",
-    description: "海上丝路起点之一，民营经济和宗教文化都很突出。",
-    advantages: [
-      "历史文化底蕴深，宗教建筑多",
-      "冬季偏暖"
-    ],
-    disadvantages: [
-      "夏季湿热",
-      "台风和暴雨天气偶有影响"
-    ],
-    image: "🕍",
-    emoji: "🌊"
-  },
-  "舟山": {
-    tags: [
-      "warm_humid", "slow_pace", "coastal", "nature",
-      "outdoor", "medium_cost", "friendly", "healthy_food",
-      "basic_education", "pastoral", "tourism"
-    ],
-    wuxing: ["水", "木"],
-    climate: "亚热带海洋性季风气候，冬季温和",
-    description: "群岛型城市，渔业发达，海鲜和海景资源丰富。",
-    advantages: [
-      "海岛风光独特",
-      "节奏较慢适合度假和养老"
-    ],
-    disadvantages: [
-      "台风季节影响较明显",
-      "对通勤和交通有一定挑战"
-    ],
-    image: "⛵",
-    emoji: "🏝️"
+    image: "🏮",
+    emoji: "🌊",
+    answers: {
+      1: "A", // 自然唤醒型
+      2: "A", // 宅家充电
+      3: "B", // 看情况
+      4: "A", // 自然疗愈
+      5: "B", // 45分钟左右
+      6: "B", // 技能独立型
+      7: "C", // 平衡和自由
+      8: "B", // 中等
+      9: "A", // 必须买房
+      10: "B", // 投资自己
+      11: "B", // 定期联系
+      12: "B", // 被动社交型
+      13: "B", // 适度友好
+      14: "C", // 享受独处
+      15: "C", // 有娃家庭
+      16: "C", // 四季分明党
+      17: "B", // 雨雪控
+      18: "A", // 非常敏感
+      19: "B", // 山川控
+      20: "B", // 怕干燥
+      21: "C", // 清淡党
+      22: "B", // 比较讲究
+      23: "B", // 偶尔有就行
+      24: "D", // 逛街体验
+      25: "C", // 骑行/步行党
+      26: "C", // 成家立业期
+      27: "B", // 中等确定
+      28: "D", // 文艺清新
+      29: "B", // 有点介意
+      30: "C"  // 理想之地
+    }
   }
 }
 
@@ -1069,7 +858,7 @@ export function calculateRecommendedCities(answers, wuxing) {
     }
 
     // 2. 选择题匹配（后天现实匹配度）
-    const optionScore = evaluateOptionScore(optionCount, cityName)
+    const optionScore = evaluateOptionScore(optionCount, cityName, answers)
     score += optionScore.score
     reasons.push(...optionScore.reasons)
 
@@ -1080,6 +869,11 @@ export function calculateRecommendedCities(answers, wuxing) {
         matchedTags.push(answer.value)
       }
     }
+
+    // 4. 城市答案匹配（新的核心算法）
+    const cityAnswerScore = evaluateCityAnswerScore(answers, cityData.answers, cityName)
+    score += cityAnswerScore.score * 2 // 提高权重
+    reasons.push(...cityAnswerScore.reasons)
 
     results.push({
       name: cityName,
@@ -1113,16 +907,16 @@ function evaluateCityElementScore(cityName, dominantElements) {
       cities: ['上海', '青岛', '大连', '宁波', '福州', '温州', '武汉', '南京', '重庆'],
       description: '沿海/沿江城市、名字带水、多雨、金融/贸易/物流发达'
     },
-    '木': {
-      cities: ['杭州', '苏州', '昆明', '贵阳', '南宁', '桂林'],
-      description: '东部城市、绿化率高、园林多、教育/文创产业发达'
-    },
     '金': {
       cities: ['西安', '成都', '重庆', '太原', '呼和浩特', '沈阳', '乌鲁木齐'],
       description: '西部城市、矿产资源、金融中心、交通枢纽'
     },
+    '木': {
+      cities: ['杭州', '苏州', '昆明', '贵阳', '南宁', '桂林'],
+      description: '东部城市、绿化率高、园林多、教育/文创产业发达'
+    },
     '土': {
-      cities: ['北京', '郑州', '西安', '成都', '重庆'],
+      cities: ['北京', '郑州', '西安', '成都', '重庆', '武汉'],
       description: '中原城市、内陆盆地、政治文化中心、厚重稳定'
     }
   }
@@ -1144,7 +938,7 @@ function evaluateCityElementScore(cityName, dominantElements) {
 /**
  * 评估选择题选项与城市的匹配度
  */
-function evaluateOptionScore(optionCount, cityName) {
+function evaluateOptionScore(optionCount, cityName, answers) {
   let score = 0
   const reasons = []
   
@@ -1200,6 +994,62 @@ function evaluateOptionScore(optionCount, cityName) {
       }
     }
   })
+  
+  // 气候耐受度特殊处理
+  if (answers) {
+    const climateAnswers = answers.filter(a => 
+      a.value === 'heat_loving' || a.value === 'cold_loving'
+    )
+    
+    climateAnswers.forEach(answer => {
+      if (answer.value === 'heat_loving') {
+        // 极度怕冷，必须去南方，扣分北方城市
+        const northernCities = ['北京', '哈尔滨', '长春', '沈阳', '西安', '太原', '呼和浩特', '乌鲁木齐']
+        if (northernCities.includes(cityName)) {
+          score -= 3
+          reasons.push(`您极度怕冷，${cityName}冬季较冷，可能不太适合`)
+        }
+      } else if (answer.value === 'cold_loving') {
+        // 极度怕热，必须去北方/高原，扣分南方城市
+        const southernCities = ['深圳', '广州', '厦门', '海口', '三亚', '南宁', '福州']
+        if (southernCities.includes(cityName)) {
+          score -= 3
+          reasons.push(`您极度怕热，${cityName}夏季较热，可能不太适合`)
+        }
+      }
+    })
+  }
+  
+  return { score, reasons }
+}
+
+/**
+ * 评估城市答案与用户答案的匹配度
+ */
+function evaluateCityAnswerScore(userAnswers, cityAnswers, cityName) {
+  let score = 0
+  const reasons = []
+  let matchCount = 0
+  
+  // 构建用户答案的题目ID到选项的映射
+  const userAnswerMap = {}
+  userAnswers.forEach(answer => {
+    userAnswerMap[answer.questionId] = answer.option
+  })
+  
+  // 计算匹配度
+  for (let qid = 1; qid <= 30; qid++) {
+    if (userAnswerMap[qid] && cityAnswers[qid]) {
+      if (userAnswerMap[qid] === cityAnswers[qid]) {
+        matchCount++
+        score += 1
+      }
+    }
+  }
+  
+  // 生成理由
+  const matchPercentage = Math.round((matchCount / 30) * 100)
+  reasons.push(`与${cityName}的生活方式匹配度为${matchPercentage}%，${matchCount}道题目选项一致`)
   
   return { score, reasons }
 }

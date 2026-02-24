@@ -177,7 +177,7 @@ const topCity = computed(() => {
 })
 
 const otherCities = computed(() => {
-  return recommendedCities.value.slice(1, 6) // 显示前6个其他城市
+  return recommendedCities.value.slice(1, 3) // 显示前2个其他城市
 })
 
 function getElementIcon(element) {
