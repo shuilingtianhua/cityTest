@@ -12,7 +12,7 @@
         <div class="main-result">
           <div class="result-title">
             <span class="title-icon">🏆</span>
-            <span>综合你的五行属性与生活偏好，你最适合居住的城市是</span>
+            <span>综合你的五行属性与生活偏好，你的天选之城是</span>
           </div>
 
           <div class="city-card main-city">
